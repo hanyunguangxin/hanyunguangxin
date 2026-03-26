@@ -9,7 +9,7 @@
     <!-- 引入Google Fonts 增加书法感 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
-        /* ========== 极致国风华丽样式 ========== */
+        /* ========== 红色+金色国风华丽样式 ========== */
         * {
             margin: 0;
             padding: 0;
@@ -17,12 +17,12 @@
         }
         
         body {
-            background: #1e1a16;
+            background: #1a0f0c;
             font-family: 'Noto Serif SC', '华文楷书', 'Microsoft YaHei', serif;
             position: relative;
         }
         
-        /* 华丽背景层 - 多层叠加营造奢华感 */
+        /* 华丽背景层 - 红色金色基调 */
         body::before {
             content: "";
             position: fixed;
@@ -31,10 +31,10 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 20% 30%, rgba(100, 60, 40, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(180, 120, 80, 0.2) 0%, transparent 50%),
-                repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.03) 0px, rgba(212, 175, 55, 0.03) 2px, transparent 2px, transparent 8px),
-                linear-gradient(135deg, #2a1e18 0%, #1e1612 50%, #2a1e18 100%);
+                radial-gradient(circle at 20% 30%, rgba(178, 34, 52, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+                repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.04) 0px, rgba(212, 175, 55, 0.04) 2px, transparent 2px, transparent 8px),
+                linear-gradient(135deg, #2a1510 0%, #1e0e0a 50%, #2a1510 100%);
             z-index: -2;
         }
         
@@ -46,7 +46,7 @@
             left: 0;
             right: 0;
             height: 40%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><path fill="rgba(80,50,35,0.3)" d="M0,200 L0,150 Q100,130 200,140 Q300,150 400,130 Q500,110 600,120 Q700,130 800,110 Q900,90 1000,100 Q1100,110 1200,90 L1200,200 Z"/><path fill="rgba(100,70,50,0.25)" d="M0,200 L0,170 Q150,155 300,165 Q450,175 600,160 Q750,145 900,155 Q1050,165 1200,150 L1200,200 Z"/></svg>') repeat-x bottom;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><path fill="rgba(139,26,26,0.25)" d="M0,200 L0,150 Q100,130 200,140 Q300,150 400,130 Q500,110 600,120 Q700,130 800,110 Q900,90 1000,100 Q1100,110 1200,90 L1200,200 Z"/><path fill="rgba(178,34,52,0.2)" d="M0,200 L0,170 Q150,155 300,165 Q450,175 600,160 Q750,145 900,155 Q1050,165 1200,150 L1200,200 Z"/></svg>') repeat-x bottom;
             background-size: 1200px 200px;
             opacity: 0.5;
             pointer-events: none;
@@ -61,8 +61,8 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            background: radial-gradient(circle at 30% 40%, rgba(212,175,55,0.08) 0%, transparent 1%),
-                        radial-gradient(circle at 70% 60%, rgba(212,175,55,0.08) 0%, transparent 1%);
+            background: radial-gradient(circle at 30% 40%, rgba(212,175,55,0.1) 0%, transparent 1%),
+                        radial-gradient(circle at 70% 60%, rgba(212,175,55,0.1) 0%, transparent 1%);
             background-size: 80px 80px, 100px 100px;
             background-repeat: repeat;
             z-index: -1;
@@ -74,14 +74,14 @@
             100% { background-position: 200px 200px, -150px 150px; }
         }
         
-        /* ========== 全新官方风格导航栏 ========== */
+        /* ========== 官方风格导航栏 ========== */
         #header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(20, 14, 10, 0.85);
+            background: rgba(26, 15, 12, 0.92);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.5);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
         
@@ -94,28 +94,25 @@
             margin: 0 auto;
         }
         
-        /* Logo区域 */
+        /* Logo区域 - 去掉小图标 */
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
             text-decoration: none;
         }
         
-        .logo .symbol img {
-            width: 42px;
-            height: 42px;
-            filter: drop-shadow(0 2px 4px rgba(212,175,55,0.5));
+        .logo .symbol {
+            display: none;
         }
         
         .logo .title {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
             background: linear-gradient(135deg, #F5E7C8, #D4AF37, #B88D2E);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             font-family: 'Noto Serif SC', serif;
         }
         
@@ -149,7 +146,6 @@
             text-shadow: 0 0 8px rgba(212,175,55,0.5);
         }
         
-        /* 下划线动画 */
         .nav-menu li a::after {
             content: '';
             position: absolute;
@@ -166,12 +162,10 @@
             width: 80%;
         }
         
-        /* 移动端菜单按钮 - 隐藏，用原有菜单 */
         #header nav {
             display: none;
         }
         
-        /* 移动端响应式 */
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
@@ -187,7 +181,7 @@
             }
         }
         
-        /* 主容器 */
+        /* 主容器 - 去掉顶部多余空白 */
         #wrapper {
             position: relative;
             z-index: 2;
@@ -199,16 +193,16 @@
             padding: 0 20px;
         }
         
-        /* 华丽装饰边框 - 仿古画轴 */
+        /* 华丽装饰边框 - 红色金色主题 */
         .hero-art {
             position: relative;
             text-align: center;
-            padding: 5rem 2rem 6rem;
-            margin: 2rem 0 3rem;
-            background: linear-gradient(135deg, rgba(30,20,16,0.7) 0%, rgba(50,35,28,0.6) 100%);
+            padding: 3.5rem 2rem 4.5rem;
+            margin: 1rem 0 2rem;
+            background: linear-gradient(135deg, rgba(139,26,26,0.5) 0%, rgba(50,30,25,0.6) 100%);
             border-radius: 80px 40px 80px 40px;
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(212,175,55,0.5);
+            border: 1px solid rgba(212,175,55,0.6);
             box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(212,175,55,0.3);
             overflow: hidden;
         }
@@ -231,41 +225,29 @@
             bottom: 15px;
             left: 50%;
             transform: translateX(-50%);
-            color: rgba(212,175,55,0.5);
+            color: rgba(212,175,55,0.6);
             font-size: 14px;
             letter-spacing: 8px;
         }
         
-        /* 超级华丽艺术字 */
+        /* 清晰华丽的艺术字 */
         .hero-art h1 {
-            font-size: 6.5rem;
+            font-size: 6rem;
             font-weight: 900;
             margin: 0;
             font-family: 'Noto Serif SC', '华文行书', serif;
-            background: linear-gradient(135deg, #F5E7C8 0%, #E4C580 30%, #D4AF37 50%, #B88D2E 70%, #F5E7C8 100%);
+            background: linear-gradient(135deg, #F5E7C8 0%, #E5C580 25%, #D4AF37 50%, #C49A2E 75%, #F5E7C8 100%);
             -webkit-background-clip: text;
             background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 30px rgba(212,175,55,0.5), 0 0 15px rgba(0,0,0,0.3);
+            color: #D4AF37;
             letter-spacing: 16px;
             position: relative;
             display: inline-block;
-            animation: titleGlow 3s ease-in-out infinite;
-        }
-        
-        @keyframes titleGlow {
-            0%, 100% { text-shadow: 0 0 20px rgba(212,175,55,0.4), 0 0 10px rgba(0,0,0,0.3); }
-            50% { text-shadow: 0 0 40px rgba(212,175,55,0.8), 0 0 20px rgba(212,175,55,0.5); }
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .hero-art h1 span {
             display: inline-block;
-            animation: characterFloat 2s ease-in-out infinite;
-        }
-        
-        @keyframes characterFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
         }
         
         .hero-art .subtitle {
@@ -274,8 +256,8 @@
             margin-top: 1.5rem;
             letter-spacing: 6px;
             text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-            border-top: 1px solid rgba(212,175,55,0.5);
-            border-bottom: 1px solid rgba(212,175,55,0.3);
+            border-top: 1px solid rgba(212,175,55,0.6);
+            border-bottom: 1px solid rgba(212,175,55,0.4);
             display: inline-block;
             padding: 0.6rem 2rem;
             background: rgba(0,0,0,0.3);
@@ -286,18 +268,19 @@
         .hero-art .desc {
             max-width: 700px;
             margin: 2rem auto 0;
-            color: #E8DCC4;
+            color: #F0E0C0;
             font-size: 1rem;
             line-height: 1.9;
             text-shadow: 0 1px 2px rgba(0,0,0,0.3);
         }
         
         @media (max-width: 768px) {
-            .hero-art h1 { font-size: 3rem; letter-spacing: 8px; }
+            .hero-art h1 { font-size: 2.8rem; letter-spacing: 8px; }
             .hero-art .subtitle { font-size: 0.8rem; letter-spacing: 2px; }
+            .hero-art { padding: 2rem 1rem 3rem; margin: 0.5rem 0 1rem; }
         }
         
-        /* 华丽标题装饰 */
+        /* 华丽标题装饰 - 红色金色 */
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
@@ -307,7 +290,7 @@
         .section-title h2 {
             font-size: 2.5rem;
             font-weight: 600;
-            background: linear-gradient(135deg, #E8DCC4, #D4AF37, #B88D2E);
+            background: linear-gradient(135deg, #F5E7C8, #D4AF37, #C49A2E);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -342,11 +325,11 @@
         .section-title::before { top: -15px; }
         .section-title::after { bottom: -15px; }
         
-        /* 华丽卡片样式 - 金边浮雕效果 */
+        /* 卡片样式 - 红色金色主题 */
         .story-card, .digital-item, .team-card, .product-card-single {
-            background: linear-gradient(135deg, rgba(35,25,20,0.85) 0%, rgba(45,32,26,0.9) 100%);
+            background: linear-gradient(135deg, rgba(139,26,26,0.75) 0%, rgba(45,32,26,0.85) 100%);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(212,175,55,0.4);
+            border: 1px solid rgba(212,175,55,0.5);
             border-radius: 24px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.3), inset 0 1px 0 rgba(212,175,55,0.2);
             transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
@@ -361,7 +344,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.15), transparent);
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.2), transparent);
             transition: left 0.6s ease;
         }
         
@@ -371,19 +354,19 @@
         
         .story-card:hover, .digital-item:hover, .team-card:hover {
             transform: translateY(-12px);
-            border-color: rgba(212,175,55,0.8);
-            box-shadow: 0 25px 45px rgba(0,0,0,0.4), 0 0 20px rgba(212,175,55,0.2);
+            border-color: rgba(212,175,55,0.9);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.4), 0 0 20px rgba(212,175,55,0.3);
         }
         
-        /* IP展示区 - 奢华卷轴 */
+        /* IP展示区 - 红色金色卷轴 */
         .ip-highlight {
-            background: linear-gradient(135deg, rgba(25,18,14,0.9) 0%, rgba(45,32,26,0.85) 100%);
+            background: linear-gradient(135deg, rgba(139,26,26,0.75) 0%, rgba(45,32,26,0.8) 100%);
             backdrop-filter: blur(10px);
             padding: 3rem;
             border-radius: 80px 40px 80px 40px;
             text-align: center;
             margin: 2rem 0;
-            border: 2px solid rgba(212,175,55,0.6);
+            border: 2px solid rgba(212,175,55,0.7);
             box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(212,175,55,0.3);
             position: relative;
         }
@@ -391,7 +374,7 @@
         .ip-highlight::before {
             content: "“";
             font-size: 6rem;
-            color: rgba(212,175,55,0.4);
+            color: rgba(212,175,55,0.5);
             position: absolute;
             top: -20px;
             left: 30px;
@@ -401,7 +384,7 @@
         .ip-highlight::after {
             content: "”";
             font-size: 6rem;
-            color: rgba(212,175,55,0.4);
+            color: rgba(212,175,55,0.5);
             position: absolute;
             bottom: -40px;
             right: 30px;
@@ -425,7 +408,7 @@
             text-shadow: 0 0 20px rgba(212,175,55,0.3);
         }
         
-        /* 产品卡片华丽版 */
+        /* 产品卡片 */
         .single-product-show {
             display: flex;
             justify-content: center;
@@ -444,11 +427,11 @@
         
         .product-card-single .product-img {
             height: 320px;
-            background: linear-gradient(145deg, #2a1e18, #1e1612);
+            background: linear-gradient(145deg, #2a1a15, #1e1210);
             display: flex;
             align-items: center;
             justify-content: center;
-            border-bottom: 2px solid rgba(212,175,55,0.5);
+            border-bottom: 2px solid rgba(212,175,55,0.6);
         }
         
         .product-card-single .product-img img {
@@ -466,7 +449,7 @@
         
         .product-card-single p {
             padding: 0 1.5rem;
-            color: #CBBE9C;
+            color: #E8DCC4;
             line-height: 1.6;
         }
         
@@ -484,16 +467,16 @@
         
         /* 数字内容区 */
         .digital-area {
-            background: linear-gradient(135deg, rgba(30,20,16,0.8), rgba(45,32,26,0.85));
+            background: linear-gradient(135deg, rgba(139,26,26,0.65), rgba(45,32,26,0.75));
             backdrop-filter: blur(12px);
             padding: 2.5rem;
             border-radius: 60px 30px 60px 30px;
-            border: 1px solid rgba(212,175,55,0.5);
+            border: 1px solid rgba(212,175,55,0.6);
         }
         
         /* 团队卡片 */
         .team-card {
-            background: linear-gradient(145deg, rgba(35,25,20,0.9), rgba(45,32,26,0.95));
+            background: linear-gradient(145deg, rgba(139,26,26,0.75), rgba(45,32,26,0.85));
             border-radius: 80px 40px 80px 40px;
             padding: 1.8rem 1.2rem;
             width: 190px;
@@ -511,8 +494,8 @@
             justify-content: center;
             font-size: 2.8rem;
             color: #1e1612;
-            box-shadow: 0 8px 20px rgba(212,175,55,0.3), inset 0 2px 4px rgba(255,255,255,0.3);
-            border: 2px solid rgba(255,215,0,0.5);
+            box-shadow: 0 8px 20px rgba(212,175,55,0.4), inset 0 2px 4px rgba(255,255,255,0.3);
+            border: 2px solid rgba(212,175,55,0.6);
         }
         
         .team-card h4 {
@@ -522,25 +505,25 @@
         }
         
         .team-card p {
-            color: #CBBE9C;
+            color: #E8DCC4;
             font-size: 0.85rem;
         }
         
         .leader-card {
             border: 2px solid #D4AF37;
-            box-shadow: 0 0 20px rgba(212,175,55,0.3);
+            box-shadow: 0 0 20px rgba(212,175,55,0.4);
         }
         
         /* 线下活动区 */
         .activity-area {
-            background: linear-gradient(135deg, rgba(30,20,16,0.85), rgba(45,32,26,0.9));
+            background: linear-gradient(135deg, rgba(139,26,26,0.7), rgba(45,32,26,0.8));
             backdrop-filter: blur(12px);
             border-radius: 60px 30px 60px 30px;
             padding: 2.5rem;
-            border: 1px solid rgba(212,175,55,0.5);
+            border: 1px solid rgba(212,175,55,0.6);
         }
         
-        /* 按钮华丽样式 */
+        /* 按钮样式 */
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, #D4AF37, #B88D2E);
@@ -558,16 +541,16 @@
         
         .btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(212,175,55,0.4);
+            box-shadow: 0 8px 25px rgba(212,175,55,0.5);
             background: linear-gradient(135deg, #E5C870, #C89D3A);
         }
         
-        /* 底部华丽装饰 */
+        /* 底部装饰 */
         footer {
             margin-top: 4rem;
-            border-top: 2px solid rgba(212,175,55,0.4);
+            border-top: 2px solid rgba(212,175,55,0.5);
             position: relative;
-            background: rgba(20,14,10,0.6);
+            background: rgba(20,12,10,0.7);
             backdrop-filter: blur(8px);
         }
         
@@ -577,14 +560,14 @@
             top: -18px;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(135deg, #2a1e18, #1e1612);
+            background: linear-gradient(135deg, #2a1510, #1e0e0a);
             padding: 0 30px;
             color: #D4AF37;
             font-size: 0.8rem;
             letter-spacing: 3px;
             white-space: nowrap;
             border-radius: 40px;
-            border: 1px solid rgba(212,175,55,0.5);
+            border: 1px solid rgba(212,175,55,0.6);
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         
@@ -595,7 +578,7 @@
             right: 2%;
             width: 180px;
             height: 120px;
-            background: radial-gradient(ellipse at center, rgba(212,175,55,0.1) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(212,175,55,0.12) 0%, transparent 70%);
             border-radius: 50%;
             filter: blur(20px);
             pointer-events: none;
@@ -610,16 +593,14 @@
             height: 150px;
         }
         
-        /* 故事卡片文字颜色 */
         .story-card h3 {
             color: #D4AF37;
         }
         
         .story-card p {
-            color: #CBBE9C;
+            color: #E8DCC4;
         }
         
-        /* 响应式 */
         @media (max-width: 768px) {
             .hero-art h1 { font-size: 2.8rem; letter-spacing: 4px; }
             .section-title h2 { font-size: 1.6rem; }
@@ -641,7 +622,6 @@
         <header id="header">
             <div class="inner">
                 <a href="index.html" class="logo">
-                    <span class="symbol"><img src="images/logo.svg" alt="" /></span>
                     <span class="title">汉韵桄心</span>
                 </a>
                 
@@ -656,7 +636,7 @@
                     <li><a href="#team">团队风华</a></li>
                 </ul>
                 
-                <!-- 移动端菜单按钮（保留原有功能） -->
+                <!-- 移动端菜单按钮 -->
                 <nav>
                     <ul>
                         <li><a href="#menu">✦ 雅集 ✦</a></li>
@@ -665,7 +645,7 @@
             </div>
         </header>
 
-        <!-- Menu - 移动端侧边菜单（保留） -->
+        <!-- Menu - 移动端侧边菜单 -->
         <nav id="menu">
             <h2 style="color:#D4AF37;">✦ 桄心雅集 ✦</h2>
             <ul>
@@ -682,11 +662,9 @@
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <!-- 艺术字主视觉区 极致华丽 -->
+                <!-- 艺术字主视觉区 -->
                 <div class="hero-art">
-                    <h1>
-                        <span>汉</span><span>韵</span><span>桄</span><span>心</span>
-                    </h1>
+                    <h1>汉韵桄心</h1>
                     <div class="subtitle">让非遗触手可及 · 让传承融入日常</div>
                     <div class="desc">
                         “非遗IP生态重塑计划” | 自创非遗IP“汉小桄”<br>
@@ -700,17 +678,17 @@
                         <h2>项目缘起</h2>
                     </div>
                     <div style="display: flex; flex-wrap: wrap; gap: 2rem; text-align: center;">
-                        <div style="flex: 1; background: rgba(35,25,20,0.6); backdrop-filter: blur(8px); padding: 2rem; border-radius: 32px; border: 1px solid rgba(212,175,55,0.3);">
+                        <div style="flex: 1; background: rgba(139,26,26,0.5); backdrop-filter: blur(8px); padding: 2rem; border-radius: 32px; border: 1px solid rgba(212,175,55,0.4);">
                             <h3 style="color:#D4AF37; font-size:1.8rem;">🎭 非遗困境</h3>
-                            <p style="color:#CBBE9C;">汉调桄桄，2006年入选国家级非遗，目前全国仅剩汉中市南郑区一个专业剧团，传承人不足60人，年轻一代认知几乎空白。</p>
+                            <p style="color:#E8DCC4;">汉调桄桄，2006年入选国家级非遗，目前全国仅剩汉中市南郑区一个专业剧团，传承人不足60人，年轻一代认知几乎空白。</p>
                         </div>
-                        <div style="flex: 1; background: rgba(35,25,20,0.6); backdrop-filter: blur(8px); padding: 2rem; border-radius: 32px; border: 1px solid rgba(212,175,55,0.3);">
+                        <div style="flex: 1; background: rgba(139,26,26,0.5); backdrop-filter: blur(8px); padding: 2rem; border-radius: 32px; border: 1px solid rgba(212,175,55,0.4);">
                             <h3 style="color:#D4AF37; font-size:1.8rem;">🏫 校园机遇</h3>
-                            <p style="color:#CBBE9C;">高校大学生对国潮文化、IP联名产品消费热情高涨，但市场上鲜有将非遗与年轻化IP深度融合的创新产品。</p>
+                            <p style="color:#E8DCC4;">高校大学生对国潮文化、IP联名产品消费热情高涨，但市场上鲜有将非遗与年轻化IP深度融合的创新产品。</p>
                         </div>
-                        <div style="flex: 1; background: rgba(35,25,20,0.6); backdrop-filter: blur(8px); padding: 2rem; border-radius: 32px; border: 1px solid rgba(212,175,55,0.3);">
+                        <div style="flex: 1; background: rgba(139,26,26,0.5); backdrop-filter: blur(8px); padding: 2rem; border-radius: 32px; border: 1px solid rgba(212,175,55,0.4);">
                             <h3 style="color:#D4AF37; font-size:1.8rem;">✨ 我们的模式</h3>
-                            <p style="color:#CBBE9C;">“自创非遗IP+轻量化传播”模式，自创IP“汉小桄”，以实物文创+数字内容+线下体验，让非遗融入大学生日常。</p>
+                            <p style="color:#E8DCC4;">“自创非遗IP+轻量化传播”模式，自创IP“汉小桄”，以实物文创+数字内容+线下体验，让非遗融入大学生日常。</p>
                         </div>
                     </div>
                 </section>
@@ -738,7 +716,7 @@
                 <section id="products">
                     <div class="section-title">
                         <h2>桄心潮品 · 实物文创</h2>
-                        <p style="color:#CBBE9C;">以“汉小桄”为核心元素的匠心之作</p>
+                        <p style="color:#E8DCC4;">以“汉小桄”为核心元素的匠心之作</p>
                     </div>
                     
                     <div class="single-product-show">
@@ -768,7 +746,7 @@
                 <section id="digital">
                     <div class="section-title">
                         <h2>桄心互动 · 数字雅集</h2>
-                        <p style="color:#CBBE9C;">关注抖音，转发视频，免费领取“汉小桄”主题数字周边</p>
+                        <p style="color:#E8DCC4;">关注抖音，转发视频，免费领取“汉小桄”主题数字周边</p>
                     </div>
                     <div class="digital-area">
                         <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
@@ -792,7 +770,7 @@
                 <section id="story">
                     <div class="section-title">
                         <h2>桄桄故事 · 文化寻踪</h2>
-                        <p style="color:#CBBE9C;">了解汉调桄桄的前世今生 + “汉小桄”的诞生记</p>
+                        <p style="color:#E8DCC4;">了解汉调桄桄的前世今生 + “汉小桄”的诞生记</p>
                     </div>
                     <div class="story-grid" style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
                         <div class="story-card" style="width: 200px; padding: 1.2rem;"><img src="images/story-history.jpg" alt="桄桄溯源" style="width:100%; border-radius: 16px;"><h3>桄桄溯源</h3><p>明代秦腔与汉中方言融合，2006年入选国家级非遗</p></div>
@@ -813,8 +791,8 @@
                             <div style="flex: 2;">
                                 <span class="product-badge" style="background: linear-gradient(135deg,#D4AF37,#B88D2E); color:#1e1612; padding:0.3rem 1.2rem; border-radius:40px;">🎨 非遗体验官招募</span>
                                 <h3 style="color:#D4AF37; margin: 1rem 0;">“汉小桄”拼豆打卡活动</h3>
-                                <p style="color:#CBBE9C;">将彩色塑料豆粒拼出“汉小桄”形象、戏曲道具等主题图案，熨烫成型。现场制作，拍照打卡，发布抖音，带走属于你的非遗作品！</p>
-                                <p style="color:#CBBE9C;"><strong>参与方式：</strong>校内摊位现场参与 → 完成“汉小桄”拼豆作品 → 拍照打卡 → 关注抖音发布视频 → 领取限定好礼</p>
+                                <p style="color:#E8DCC4;">将彩色塑料豆粒拼出“汉小桄”形象、戏曲道具等主题图案，熨烫成型。现场制作，拍照打卡，发布抖音，带走属于你的非遗作品！</p>
+                                <p style="color:#E8DCC4;"><strong>参与方式：</strong>校内摊位现场参与 → 完成“汉小桄”拼豆作品 → 拍照打卡 → 关注抖音发布视频 → 领取限定好礼</p>
                                 <a href="#" class="btn">📸 了解活动详情</a>
                             </div>
                             <div style="flex: 1; text-align: center;">
@@ -828,7 +806,7 @@
                 <section id="team">
                     <div class="section-title">
                         <h2>团队风华</h2>
-                        <p style="color:#CBBE9C;">一群热爱非遗、专注创新的交大学子</p>
+                        <p style="color:#E8DCC4;">一群热爱非遗、专注创新的交大学子</p>
                     </div>
                     <div class="team-grid">
                         <div class="team-card leader-card">
@@ -862,8 +840,8 @@
             <div class="inner">
                 <section>
                     <h2 style="color:#D4AF37;">关注我们</h2>
-                    <p style="color:#CBBE9C;">抖音搜索：<strong style="color:#D4AF37;">@汉韵桄心</strong></p>
-                    <p style="color:#CBBE9C;">关注后私信「桄桄」领取“汉小桄”表情包和红包封面</p>
+                    <p style="color:#E8DCC4;">抖音搜索：<strong style="color:#D4AF37;">@汉韵桄心</strong></p>
+                    <p style="color:#E8DCC4;">关注后私信「桄桄」领取“汉小桄”表情包和红包封面</p>
                     <ul class="icons">
                         <li><a href="#" class="icon brands style2 fa-tiktok"><span class="label">TikTok</span></a></li>
                         <li><a href="#" class="icon brands style2 fa-weixin"><span class="label">WeChat</span></a></li>
@@ -871,9 +849,9 @@
                 </section>
                 <section>
                     <h2 style="color:#D4AF37;">关于项目</h2>
-                    <p style="color:#CBBE9C;">“汉韵桄心”项目组 | 西安交通大学</p>
-                    <p style="color:#CBBE9C;">让非遗触手可及，让传承融入日常</p>
-                    <p style="color:#CBBE9C;">自创非遗IP“汉小桄” | 非遗IP生态重塑计划</p>
+                    <p style="color:#E8DCC4;">“汉韵桄心”项目组 | 西安交通大学</p>
+                    <p style="color:#E8DCC4;">让非遗触手可及，让传承融入日常</p>
+                    <p style="color:#E8DCC4;">自创非遗IP“汉小桄” | 非遗IP生态重塑计划</p>
                 </section>
                 <ul class="copyright">
                     <li style="color:#8B7355;">&copy; 2026 汉韵桄心. All rights reserved</li>
