@@ -2,508 +2,555 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>汉韵桄心 | 非遗IP生态重塑计划</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉韵桄心 - 汉调桄桄非遗IP活态传承项目 | 国创赛</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: "思源黑体", "Microsoft YaHei", sans-serif;
         }
-
+        :root {
+            --primary: #005AA7;
+            --secondary: #F5F0E6;
+            --dark: #333333;
+            --light: #FFFFFF;
+            --accent: #E64A19;
+            --gray: #EEEEEE;
+        }
         body {
-            font-family: 'Noto Serif SC', 'Times New Roman', serif;
-            background: linear-gradient(145deg, #9b1d1d 0%, #7a0f0f 30%, #a52222 100%);
-            color: #FFF3E0;
+            color: var(--dark);
+            line-height: 1.6;
             scroll-behavior: smooth;
         }
-
-        :root {
-            --royal-gold: #FFD966;
-            --ruby-red: #C41E3A;
-            --deep-crimson: #A51C30;
-            --dark-red-bg: #8B1A1A;
-            --brilliant-gold: #F5B81B;
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 32px;
-        }
-
-        .art-title, h1, h2, h3, .section-head, .logo-text, .ip-name {
-            font-family: 'Playfair Display', 'Noto Serif SC', serif;
-            font-weight: 800;
-            letter-spacing: 2px;
-        }
-
-        .hero-big-title {
-            font-size: 5.2rem;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', 'Noto Serif SC', serif;
-            font-weight: 900;
-            text-shadow: 5px 5px 12px rgba(0,0,0,0.4), 0px 0px 25px rgba(255, 215, 0, 0.5);
-            background: linear-gradient(135deg, #FFE9A7 0%, #FFD166 40%, #F5B81B 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        @media (max-width: 768px) {
-            .hero-big-title {
-                font-size: 3rem;
-            }
-            .container {
-                padding: 0 20px;
-            }
-        }
-
-        .navbar-luxury {
-            background: rgba(130, 20, 30, 0.92);
-            backdrop-filter: blur(12px);
-            position: sticky;
+        /* 导航栏 */
+        .nav {
+            position: fixed;
             top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--royal-gold);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-        }
-        .nav-flex {
+            width: 100%;
+            background: var(--primary);
+            color: var(--light);
+            z-index: 999;
+            padding: 0.8rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            padding: 12px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 0;
-        }
-        .logo-text {
-            font-size: 1.8rem;
-            font-weight: 900;
-            font-family: 'Playfair Display', 'Noto Serif SC', serif;
-            background: linear-gradient(135deg, #FFD966, #FFB347);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: 2px;
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        .nav-links a {
-            text-decoration: none;
-            font-weight: 600;
-            color: #FFEFCF;
-            transition: 0.2s;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            font-family: 'Noto Serif SC', serif;
-        }
-        .nav-links a:hover {
-            color: var(--royal-gold);
-            text-shadow: 0 0 5px gold;
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, #FFD966, #E6A017);
-            border: none;
-            color: #5C0E1A;
-            font-weight: bold;
-            padding: 12px 30px;
-            border-radius: 60px;
-            font-size: 1.1rem;
-            transition: 0.3s;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.3);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            font-family: 'Noto Serif SC', serif;
-        }
-        .btn-gold:hover {
-            transform: scale(1.05);
-            background: linear-gradient(135deg, #FFE484, #F5A623);
-            box-shadow: 0 12px 28px rgba(255, 200, 0, 0.6);
-        }
-
-        .section-card {
-            background: rgba(160, 30, 40, 0.65);
-            backdrop-filter: blur(3px);
-            border-radius: 64px;
-            padding: 48px 36px;
-            margin: 40px 0;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 1px 2px rgba(255,215,0,0.3);
-            border: 1px solid var(--royal-gold);
-        }
-
-        .intro-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            align-items: center;
-        }
-        .intro-text {
-            flex: 1.2;
-        }
-        .intro-images {
-            flex: 0.8;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .img-placeholder {
-            background: rgba(0,0,0,0.3);
-            border-radius: 32px;
-            padding: 40px 20px;
-            text-align: center;
-            border: 2px dashed var(--royal-gold);
-            backdrop-filter: blur(4px);
-            transition: 0.3s;
-        }
-        .img-placeholder i {
-            font-size: 3rem;
-            color: var(--royal-gold);
-            margin-bottom: 12px;
-            display: block;
-        }
-        .img-placeholder p {
-            font-size: 0.9rem;
-            color: #FFE4B5;
-        }
-        .img-placeholder:hover {
-            border-color: #FFD966;
-            background: rgba(255,217,102,0.1);
-        }
-
-        .ip-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            align-items: center;
-            flex-direction: row-reverse;
-        }
-        .ip-text {
-            flex: 1.2;
-        }
-        .ip-image {
-            flex: 0.8;
-        }
-        .ip-avatar-card {
-            background: radial-gradient(circle at 30% 20%, #C93A3A, #9E1E2C);
-            border-radius: 60px;
-            padding: 28px 20px;
-            text-align: center;
-            box-shadow: 0 20px 30px rgba(0,0,0,0.4);
-            border: 2px solid #FFD966;
-            min-height: 320px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .ip-name {
-            font-size: 2.2rem;
-            font-weight: 900;
-            font-family: 'Playfair Display', 'Noto Serif SC', serif;
-            color: #FFE484;
-            text-shadow: 3px 3px 0 #8B1A1A;
-            margin-bottom: 16px;
-        }
-
-        .product-showcase {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-            margin: 50px 0;
-        }
-        .product-item {
-            background: rgba(255,245,225,0.95);
-            border-radius: 48px;
-            padding: 20px 20px 30px;
-            width: 240px;
-            text-align: center;
-            transition: all 0.3s;
-            box-shadow: 0 20px 30px rgba(0,0,0,0.3);
-            border: 1px solid #FFD966;
-            color: #2C1A0C;
-        }
-        .product-item:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 30px 40px rgba(255, 210, 0, 0.5);
-        }
-        .product-illustration {
-            height: 150px;
-            background: linear-gradient(145deg, rgba(255,230,191,0.6), rgba(255,210,158,0.6));
-            border-radius: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-            border: 2px dashed #C41E3A;
-            position: relative;
-            overflow: hidden;
-        }
-        .product-illustration i {
-            font-size: 3rem;
-            color: #B22234;
-            opacity: 0.6;
-        }
-        .product-illustration p {
-            position: absolute;
-            bottom: 12px;
-            font-size: 0.7rem;
-            color: #8B1A1A;
-            background: rgba(255,245,225,0.8);
-            padding: 2px 8px;
-            border-radius: 20px;
-        }
-        .product-price {
-            font-weight: bold;
-            color: #B22234;
-            margin: 12px 0;
-        }
-
-        .team-gold {
-            background: linear-gradient(125deg, #AA2E2E, #831C1C);
-            border-radius: 70px;
-            padding: 48px 36px;
-            border: 2px solid #FFD966;
-            margin: 50px 0;
-            box-shadow: 0 20px 35px rgba(0,0,0,0.4);
-        }
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 24px;
-            margin-top: 30px;
-        }
-        .member {
-            background: rgba(255,245,220,0.95);
-            border-radius: 40px;
-            padding: 18px;
-            text-align: center;
-            font-weight: 500;
-            border-left: 6px solid var(--royal-gold);
-            color: #2C1A0C;
-            transition: 0.2s;
-        }
-        .role {
-            color: #B22234;
-            font-weight: bold;
-            letter-spacing: 1px;
-            font-size: 1rem;
-        }
-
-        footer {
-            background: #610F1A;
-            color: #FFE7BA;
-            padding: 40px 0;
-            text-align: center;
-            border-top: 4px solid #FFD966;
-            margin-top: 40px;
-        }
-        .gold-text {
-            color: var(--royal-gold);
-        }
-
-        h2, .section-title {
-            font-family: 'Playfair Display', 'Noto Serif SC', serif;
-            font-weight: 800;
-        }
-        h3 {
-            font-family: 'Playfair Display', 'Noto Serif SC', serif;
+        /* 导航logo改为宋体 */
+        .nav .logo {
+            font-size: 1.5rem;
             font-weight: 700;
+            display: flex;
+            align-items: center;
+            font-family: "SimSun", "宋体", serif;
+        }
+        .nav .menu {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .nav .menu a {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+        .nav .menu a:hover {
+            color: var(--accent);
+        }
+        /* 通用板块 */
+        .section {
+            padding: 6rem 5%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .section:nth-child(even) {
+            background: var(--secondary);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        /* === 大标题：PPT级艺术行楷 === */
+        .section-title h2 {
+            font-size: 2.4rem;
+            color: var(--primary);
+            font-weight: 700;
+            font-family: "STXingkai", "STKaiti", "KaiTi", "Microsoft YaHei", sans-serif;
+            letter-spacing: 6px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent);
+        }
+        .card-wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-top: 4px solid var(--primary);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        /* 首页标题：艺术行楷 */
+        .hero {
+            background: linear-gradient(rgba(0,90,167,0.85), rgba(0,90,167,0.85)), url(https://img1.baidu.com/it/u=2892262821,3829321233&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500) no-repeat center center;
+            background-size: cover;
+            color: var(--light);
+            text-align: center;
+            padding-top: 8rem;
+        }
+        .hero h1 {
+            font-size: 4.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            font-family: "STXingkai", "STKaiti", "KaiTi", "Microsoft YaHei", sans-serif;
+            letter-spacing: 8px;
+            text-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        .hero .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--accent);
+            color: var(--light);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 0 0.5rem;
+        }
+        .hero .btn:hover {
+            background: #d33a0f;
+            transform: scale(1.05);
+        }
+        /* 项目背景 */
+        .bg-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+        }
+        .bg-text, .bg-img {
+            flex: 1;
+            min-width: 300px;
+        }
+        .bg-img img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .bg-text p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        .bg-text .tag {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        /* IP介绍 */
+        .ip-intro {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+            text-align: center;
+        }
+        .ip-img, .ip-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .ip-img img {
+            width: 80%;
+            max-width: 300px;
+            border-radius: 50%;
+            border: 5px solid var(--primary);
+        }
+        /* 产品服务 */
+        .product-card {
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+        /* 商业模式 */
+        .biz-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .biz-item {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        .biz-item h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        /* 团队介绍 */
+        .team-card {
+            text-align: center;
+        }
+        .team-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--primary);
+        }
+        .team-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+        .team-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        /* 底部 */
+        .footer {
+            background: var(--primary);
+            color: var(--light);
+            text-align: center;
+            padding: 2rem 5%;
+        }
+        .footer p {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+        .footer .social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .footer .social a {
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+        .footer .social a:hover {
+            color: var(--accent);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav .menu { gap: 1rem; }
+            .hero h1 { font-size: 2.8rem; }
+            .section-title h2 { font-size: 2rem; }
+            .biz-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .nav { flex-direction: column; gap: 0.8rem; padding: 0.8rem 3%; }
+            .hero .btn { display: block; margin: 0.5rem auto; width: 80%; }
+            .section { padding: 4rem 3%; }
         }
     </style>
 </head>
 <body>
-
-<div style="background: linear-gradient(90deg, #FFD966, #C41E3A, #FFD966); height: 6px;"></div>
-
-<div class="navbar-luxury">
-    <div class="container nav-flex">
-        <div class="logo-area">
-            <div class="logo-text">汉韵桄心</div>
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <div class="logo">
+            <span>汉韵桄心</span>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">首页</a></li>
-            <li><a href="#intro">汉调桄桄</a></li>
-            <li><a href="#ip">汉小桄</a></li>
-            <li><a href="#products">桄心好物</a></li>
-            <li><a href="#team">桄心团队</a></li>
-        </ul>
-        <a href="https://www.douyin.com" target="_blank" class="btn-gold" style="padding: 6px 20px; font-size: 0.9rem;">关注抖音</a>
-    </div>
-</div>
-
-<div class="container">
-    <div id="home" style="text-align: center; margin: 60px 0 20px;">
-        <div class="art-title hero-big-title">汉韵桄心</div>
-        <div style="font-size: 1.8rem; letter-spacing: 8px; color: #FFE484; border-bottom: 2px solid #FFD966; display: inline-block; padding-bottom: 10px; font-weight: bold; font-family: 'Playfair Display', serif;">非遗IP生态重塑计划</div>
-        <div style="margin-top: 20px; font-size: 1.2rem; background: rgba(0,0,0,0.3); display: inline-block; padding: 6px 24px; border-radius: 80px; font-family: 'Noto Serif SC', serif;">西安交通大学 · 汉韵桄心项目组</div>
-    </div>
-
-    <div id="intro" class="section-card">
-        <h2 style="font-size: 2.2rem; margin-bottom: 28px; text-align: center;">汉调桄桄简介</h2>
-        <div class="intro-content">
-            <div class="intro-text">
-                <p style="font-size: 1.05rem; line-height: 1.7; text-align: justify; margin-bottom: 20px;">明代末年关中秦腔南渡汉水，与陕南民歌方言交融，孕育出梆子声腔瑰宝——<strong class="gold-text">汉调桄桄</strong>。2006年荣列<strong>国家级非物质文化遗产</strong>名录，唱腔高亢激越兼具婉转悠扬，坐拥<strong>七百余传统剧目</strong>，《帝王珠》《刘高磨刀》等独步梨园。如今全国仅存汉中市南郑区一个专业剧团，传承人不足六十人，被誉为“天下第一团”。桄桄一响，十里燕过梁。</p>
-                <div style="margin-top: 20px; background: rgba(255,217,102,0.2); border-radius: 48px; padding: 14px; text-align: center; font-family: 'Noto Serif SC', serif;">
-                    <i class="fas fa-music"></i> 绝技：撒莲花 · 耍椅子 · 文场武场交织，千年戏魂待新生
-                </div>
-            </div>
-            <div class="intro-images">
-                <div class="img-placeholder">
-                    <i class="fas fa-image"></i>
-                    <p>汉调桄桄演出剧照</p>
-                    <p style="font-size: 0.75rem; margin-top: 8px;">【图片预留位置】</p>
-                </div>
-                <div class="img-placeholder">
-                    <i class="fas fa-image"></i>
-                    <p>汉调桄桄服饰/乐器细节</p>
-                    <p style="font-size: 0.75rem; margin-top: 8px;">【图片预留位置】</p>
-                </div>
-            </div>
+        <div class="menu">
+            <a href="#hero">首页</a>
+            <a href="#bg">项目背景</a>
+            <a href="#ip">IP介绍</a>
+            <a href="#product">产品服务</a>
+            <a href="#biz">商业模式</a>
+            <a href="#strategy">发展战略</a>
+            <a href="#team">团队介绍</a>
+            <a href="#risk">风险应对</a>
         </div>
-    </div>
+    </nav>
 
-    <div id="ip" class="section-card">
-        <h2 style="font-size: 2.2rem; margin-bottom: 28px; text-align: center;">形象IP · 汉小桄</h2>
-        <div class="ip-content">
-            <div class="ip-text">
-                <p style="font-size: 1.05rem; line-height: 1.7; text-align: justify; margin-bottom: 20px;">头戴绒球冠，手持桄桄梆，水袖蹁跹若惊鸿。诞生于南郑老戏台，<strong>人格化非遗IP</strong>，将古老声腔化作俏皮少女。她爱唱《帝王珠》，也爱梧桐道漫步，让年轻人拥有“会唱戏的朋友”。自创IP“汉小桄”以汉调桄桄经典元素为灵感，融合现代国潮审美，成为连接非遗与Z世代的桥梁。</p>
-                <div style="display: flex; gap: 20px; margin-top: 24px; flex-wrap: wrap;">
-                    <span style="background: rgba(255,217,102,0.2); padding: 8px 18px; border-radius: 40px;"><i class="fas fa-palette"></i> 交大学子原创设计</span>
-                    <span style="background: rgba(255,217,102,0.2); padding: 8px 18px; border-radius: 40px;"><i class="fas fa-heart"></i> 人格化IP形象</span>
-                </div>
+    <!-- 首页 -->
+    <section class="section hero" id="hero">
+        <div class="container">
+            <h1>汉韵桄心——非遗IP生态重塑计划</h1>
+            <p>非遗IP化 · 轻量传播 · 校园落地</p>
+            <p>西安交通大学汉韵桄心项目组</p>
+            <a href="#bg" class="btn">了解项目</a>
+            <a href="#product" class="btn">产品展示</a>
+        </div>
+    </section>
+
+    <!-- 项目背景 -->
+    <section class="section" id="bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>项目背景</h2>
             </div>
-            <div class="ip-image">
-                <div class="ip-avatar-card">
-                    <div class="ip-name">汉小桄</div>
-                    <div class="img-placeholder" style="background: rgba(0,0,0,0.2); border: 2px dashed #FFD966; margin-top: 16px; padding: 20px;">
-                        <i class="fas fa-image"></i>
-                        <p>汉小桄IP形象设计图</p>
-                        <p style="font-size: 0.75rem; margin-top: 8px;">【图片预留位置】</p>
-                    </div>
+            <div class="bg-content">
+                <div class="bg-text">
+                    <span class="tag">国家级非遗</span>
+                    <span class="tag">活态传承</span>
+                    <span class="tag">校园创新</span>
+                    <p>汉调桄桄（桄桄戏）是明代末年关中秦腔与汉中方言、民间音乐融合形成的梆子声腔剧种，2006年列入国家级非物质文化遗产名录，现全国仅汉中市南郑区一个专业剧团，传承人不足60人，观众群体严重老龄化。</p>
+                    <p>高校大学生作为国潮文化核心消费群体，对非遗IP产品需求旺盛，但市场鲜有将非遗与年轻化、人格化IP深度融合的创新产品。在此背景下，团队以「非遗IP化、IP人格化」为切入点，打造汉调桄桄专属IP「汉小桄」，探索非遗活态传承新路径。</p>
+                    <p>政策层面，党的二十大、2025年《关于进一步加强非物质文化遗产保护工作的实施意见》明确要求推动非遗与教育、科技、旅游深度融合，为项目落地提供坚实政策支撑。</p>
+                </div>
+                <div class="bg-img">
+                    <img src="https://img0.baidu.com/it/u=3262192232,3801322122&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500" alt="汉调桄桄表演">
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <h2 id="products" style="text-align: center; margin-top: 40px; font-size: 3rem;">桄心好物</h2>
-    <div style="width: 150px; height: 5px; background: linear-gradient(90deg, #FFD966, #C41E3A, #FFD966); margin: 15px auto 30px;"></div>
-
-    <div class="product-showcase">
-        <div class="product-item">
-            <div class="product-illustration">
-                <i class="fas fa-image"></i>
-                <p>帆布袋插图预留</p>
+    <!-- IP介绍 -->
+    <section class="section" id="ip">
+        <div class="container">
+            <div class="section-title">
+                <h2>核心IP · 汉小桄</h2>
             </div>
-            <h3 style="font-size: 1.4rem;">「汉小桄·帆布袋」</h3>
-            <p>耐磨帆布/桄桄身段剪影/双面宫廷纹样</p>
-            <div class="product-price">¥39.9</div>
-            <a href="https://www.douyin.com" target="_blank" class="btn-gold" style="padding: 6px 16px; font-size: 0.8rem;">抖音购买</a>
-        </div>
-
-        <div class="product-item">
-            <div class="product-illustration" style="height: 110px;">
-                <i class="fas fa-image"></i>
-                <p>贴纸插图预留</p>
-            </div>
-            <h3 style="font-size: 1.4rem;">「汉小桄·主题贴纸套装」</h3>
-            <p>桄桄台词贴 + 戏曲道具贴，手账/笔记本装饰</p>
-            <div class="product-price">¥9.9/套</div>
-            <a href="https://www.douyin.com" target="_blank" class="btn-gold" style="padding: 6px 16px; font-size: 0.8rem;">抖音购买</a>
-        </div>
-
-        <div class="product-item">
-            <div class="product-illustration" style="height: 110px;">
-                <i class="fas fa-image"></i>
-                <p>表情包插图预留</p>
-            </div>
-            <h3 style="font-size: 1.4rem;">「汉小桄·戏韵表情包」</h3>
-            <p style="margin: 8px 0;">生动有趣的汉小桄日常系列，涵盖校园生活、戏曲动作等场景</p>
-            <div class="product-price">关注抖音 免费领取</div>
-            <a href="https://www.douyin.com" target="_blank" class="btn-gold" style="padding: 6px 16px; font-size: 0.8rem;">跳转抖音</a>
-        </div>
-
-        <div class="product-item">
-            <div class="product-illustration" style="height: 110px;">
-                <i class="fas fa-image"></i>
-                <p>红包封面插图预留</p>
-            </div>
-            <h3 style="font-size: 1.4rem;">「汉小桄·限定红包封面」</h3>
-            <p>状元及第+戏曲红绒球，国潮限定款</p>
-            <div class="product-price"><span style="color:#C41E3A;">🎁 限时免费领取</span></div>
-            <a href="https://www.douyin.com" target="_blank" class="btn-gold" style="padding: 6px 16px; font-size: 0.8rem;">跳转抖音</a>
-        </div>
-    </div>
-
-    <div style="text-align: center; margin: 20px 0 40px;">
-        <a href="https://www.douyin.com" target="_blank" class="btn-gold" style="font-size: 1.3rem; padding: 14px 42px;">关注抖音「汉韵桄心」· 解锁表情包/红包封面</a>
-        <p style="margin-top: 14px; color:#FFE1A0;">抖音转发指定视频，免费领取全套数字文创！</p>
-    </div>
-
-    <div id="team" class="team-gold">
-        <div style="text-align: center;">
-            <h2 style="font-size: 2.4rem; margin: 12px 0;">西安交通大学 · 桄心团队</h2>
-            <p style="max-width: 850px; margin: 16px auto; font-size: 1.05rem; line-height: 1.5;">千年桄韵，青春交大。本项目由西安交通大学本科生团队发起，首创“非遗IP人格化”模式，自创IP“汉小桄”，打造轻量文创+数字裂变+沉浸体验的非遗活态传承新生态。项目与汉中市南郑区汉调桄桄传承发展中心深度共建，利润反哺非遗传承人培养，让古老的梆子声腔在Z世代指尖新生。</p>
-        </div>
-
-        <div style="margin-top: 48px;">
-            <h3 style="text-align: center; font-size: 1.9rem; border-left: 8px solid #FFD966; padding-left: 24px; margin-bottom: 28px;">✨ 团队成员 ✨</h3>
-            <div class="team-grid">
-                <div class="member"><span class="role">项目负责人 / 网页制作</span><br>王佩熙<br><span style="font-size: 0.8rem;">全案统筹 & 官网开发</span></div>
-                <div class="member"><span class="role">计划书撰写</span><br>阙舒瑶 & 贺予思 & 张少涵<br><span style="font-size: 0.8rem;">商业模式 · 市场分析 · 风险把控</span></div>
-                <div class="member"><span class="role">IP绘制</span><br>唐果<br><span style="font-size: 0.8rem;">汉小桄形象创作 · 表情包原画</span></div>
-                <div class="member"><span class="role">美工设计</span><br>赖安骥 & 郭晓湉 & 陆敏莹<br><span style="font-size: 0.8rem;">文创视觉 · 海报周边 · 产品延展</span></div>
-            </div>
-            <div style="text-align: center; margin-top: 30px; background: rgba(255,230,170,0.2); border-radius: 60px; padding: 18px; border: 1px solid #FFD966;">
-                指导老师：西安交通大学经济与金融学院 张成毅教授
+            <div class="ip-intro">
+                <div class="ip-img">
+                    <img src="https://img2.baidu.com/it/u=182628362,2890952118&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt="汉小桄IP形象">
+                </div>
+                <div class="ip-text">
+                    <h3>IP设计理念</h3>
+                    <p>「汉小桄」以汉调桄桄经典戏曲角色为原型，采用Q版卡通风格，提取戏曲盔头、雉鸡翎、彩色绒球、红晕凤眼妆等核心视觉元素，结合桄桄子乐器打造专属形象，兼具非遗文化底蕴与年轻化审美。</p>
+                    <br>
+                    <h3>IP人格化设定</h3>
+                    <p>性格活泼开朗、热爱传统文化的非遗小守护者，懂汉调桄桄唱腔与表演，喜欢和大学生互动，核心标签：<strong>非遗传承者、国潮小达人、校园小伙伴</strong>。</p>
+                    <br>
+                    <h3>IP世界观</h3>
+                    <p>生活在「桄桄戏曲小镇」，跟随非遗传承人学习汉调桄桄技艺，通过趣味方式将戏曲文化传递给年轻群体，让非遗走出剧场、融入日常。</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div style="display: flex; flex-wrap: wrap; gap: 28px; margin: 50px 0;">
-        <div style="flex:1; background: rgba(196,30,58,0.7); border-radius: 60px; padding: 28px; border: 1px solid #FFD966; backdrop-filter: blur(2px);">
-            <h3 style="font-size: 1.6rem;">模式创新 · 造船出海</h3>
-            <p>从“被讲述的非遗”到“主动传播的IP”，自创人格化“汉小桄”，构建非遗守护者宇宙。</p>
+    <!-- 产品服务 -->
+    <section class="section" id="product">
+        <div class="container">
+            <div class="section-title">
+                <h2>产品与服务体系</h2>
+                <p style="margin-top: 1rem; color: #666;">轻量·高频·可传播 · 四位一体轻量化产品矩阵</p>
+            </div>
+            <div class="card-wrap">
+                <div class="card product-card">
+                    <h3>桄心实物文创</h3>
+                    <img src="https://img1.baidu.com/it/u=2225929198,386913210&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt="帆布袋贴纸">
+                    <p>「汉小桄」主题帆布袋、贴纸，单价低、使用场景广，适配学生日常。</p>
+                </div>
+                <div class="card product-card">
+                    <h3>桄心数字文创</h3>
+                    <img src="https://img2.baidu.com/it/u=3802532692,2025102929&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt="表情包红包封面">
+                    <p>校园场景化表情包、节日/校园限定红包封面，关注抖音转发即可免费领取，实现社交裂变传播。</p>
+                </div>
+                <div class="card product-card">
+                    <h3>品牌展示网页</h3>
+                    <img src="https://img0.baidu.com/it/u=3952172234,2870958228&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt="品牌网页">
+                    <p>轻量级品牌展示平台，含产品展示、文化故事、互动入口，引流至抖音完成交易，降低运营成本。</p>
+                </div>
+                <div class="card product-card">
+                    <h3>线下拼豆打卡</h3>
+                    <img src="https://img0.baidu.com/it/u=2895623988,3799218233&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt="拼豆打卡">
+                    <p>校园摊位提供「汉小桄」主题拼豆材料，完成作品打卡发布抖音即可获得礼品，实现线下沉浸式体验+线上传播联动。</p>
+                </div>
+            </div>
         </div>
-        <div style="flex:1; background: rgba(196,30,58,0.7); border-radius: 60px; padding: 28px; border: 1px solid #FFD966;">
-            <h3 style="font-size: 1.6rem;">数字传播裂变</h3>
-            <p>表情包/红包封面“转发即得”，抖音+微信双生态驱动，低成本触达百万大学生。</p>
-        </div>
-        <div style="flex:1; background: rgba(196,30,58,0.7); border-radius: 60px; padding: 28px; border: 1px solid #FFD966;">
-            <h3 style="font-size: 1.6rem;">公益反哺传承</h3>
-            <p>每卖出一件文创，捐赠1元用于汉调桄桄老艺人记录与年轻传承人扶持计划。</p>
-        </div>
-    </div>
+    </section>
 
-    <div style="background: linear-gradient(125deg, #B41F2E, #8A1523); border-radius: 80px; padding: 40px; margin: 30px 0 50px; text-align: center; border: 2px solid #FFD966; box-shadow: 0 20px 35px rgba(0,0,0,0.4);">
-        <h2 style="font-size: 2.2rem; margin: 15px 0;">「桄心拼豆·校园打卡」沉浸式非遗工坊</h2>
-        <p style="font-size: 1.1rem;">西安交通大学校园快闪摊位 · 亲手制作汉小桄拼豆，打卡发布抖音即赠限定联名贴纸+红包封面</p>
-        <a href="https://www.douyin.com" target="_blank" class="btn-gold" style="margin-top: 25px;">抖音查看活动排期</a>
-    </div>
-</div>
-
-<footer>
-    <div class="container">
-        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 20px;">
-            <span>汉韵桄心项目组</span>
-            <span>18829558566@163.com</span>
-            <span>抖音：汉韵桄心</span>
+    <!-- 商业模式 -->
+    <section class="section" id="biz">
+        <div class="container">
+            <div class="section-title">
+                <h2>商业模式</h2>
+                <p style="margin-top: 1rem; color: #666;">IP驱动型 · 三重驱动 · 多元盈利</p>
+            </div>
+            <div class="biz-grid">
+                <div class="biz-item">
+                    <h3>核心逻辑</h3>
+                    <p>以「汉小桄」IP为核心，构建「IP内容×产品服务×用户生态」三重驱动模式，打造「IP形象引领-线上引流-线下体验-场景渗透」的轻量化产品服务体系，兼顾文化传播与商业变现。</p>
+                </div>
+                <div class="biz-item">
+                    <h3>收入来源</h3>
+                    <p>① 产品销售收入（帆布袋/贴纸/数字文创）；② 活动收入（拼豆DIY体验/定制服务）；③ IP授权收入（品牌联名/二次创作）；④ 会员收入（专属权益）；⑤ B端合作（学校团购/企业定制）。</p>
+                </div>
+                <div class="biz-item">
+                    <h3>商业闭环</h3>
+                    <p><strong>生产</strong>：本地代工+内部设计，控制成本；<strong>消费</strong>：线上抖音/电商+线下校园，多渠道销售；<strong>反馈</strong>：用户调研+数据分析，持续迭代IP与产品，形成良性循环。</p>
+                </div>
+                <div class="biz-item">
+                    <h3>竞争优势</h3>
+                    <p>① 差异化：校园非遗IP专属标签，人格化IP区别于传统文创；② 低成本：社交裂变获客，校园免费场地降低运营成本；③ 高粘性：产品实用+情感连接+社群运营，提升用户忠诚度。</p>
+                </div>
+            </div>
         </div>
-        <p style="opacity: 0.9; font-size: 0.9rem;">© 2026 非遗IP生态重塑计划 | 让桄桄声腔响彻青春</p>
-        <div style="margin-top: 18px;">桄·心·永·续</div>
-    </div>
-</footer>
+    </section>
+
+    <!-- 发展战略 -->
+    <section class="section" id="strategy">
+        <div class="container">
+            <div class="section-title">
+                <h2>发展战略与规划</h2>
+            </div>
+            <div class="card-wrap">
+                <div class="card">
+                    <h3>第一阶段：创意验证期（2026.4）</h3>
+                    <p>完成「汉小桄」完整视觉设计，首批文创产品打样，搭建品牌网页原型，抖音发布宣传视频，验证大学生用户兴趣，完成国创赛参赛落地。</p>
+                </div>
+                <div class="card">
+                    <h3>第二阶段：实践深化期（2026.7-8）</h3>
+                    <p>赴汉中南郑区实地调研，与传承人深度交流，完善IP文化内涵，将调研成果转化为IP故事、产品设计与内容素材，丰富文化内核。</p>
+                </div>
+                <div class="card">
+                    <h3>第三阶段：项目拓展期（2026.9起）</h3>
+                    <p>复制「自创非遗IP」模式至宁强羌绣等非遗项目，打造「非遗守护者」IP矩阵；迭代产品线（盲盒/数字藏品），拓展至西安其他高校，形成校园非遗传播圈。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队介绍 -->
+    <section class="section" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>团队介绍</h2>
+                <p style="margin-top: 1rem; color: #666;">西安交通大学本科生团队 · 多专业融合 · 创新实干</p>
+            </div>
+            <div class="card-wrap">
+                <div class="card team-card">
+                    <img src="https://img2.baidu.com/it/u=1929826378,3829102338&fm=253&fmt=auto&app=138&f=JPEG?w=200&h=200" alt="团队负责人">
+                    <h4>王佩熙</h4>
+                    <p>项目负责人 · 经济学专业</p>
+                    <p>统筹项目整体规划与资源整合，主导IP战略定位，负责网页架构与视觉设计。</p>
+                </div>
+                <div class="card team-card">
+                    <img src="https://img0.baidu.com/it/u=3829102338,1929826378&fm=253&fmt=auto&app=138&f=JPEG?w=200&h=200" alt="设计负责人">
+                    <h4>唐果</h4>
+                    <p>设计负责人 · 材料科学与工程专业</p>
+                    <p>主导IP形象原创设计与文创产品研发，构建「汉小桄」完整视觉识别体系。</p>
+                </div>
+                <div class="card team-card">
+                    <img src="https://img1.baidu.com/it/u=2891023389,3928102337&fm=253&fmt=auto&app=138&f=JPEG?w=200&h=200" alt="运营策划组">
+                    <h4>阙舒瑶 贺予思 张少涵</h4>
+                    <p>市场运营组 · ACCA/法学复合/英俄专业</p>
+                    <p>负责市场策略规划、品牌推广运营及项目计划书撰写，构建项目商业逻辑。</p>
+                </div>
+                <div class="card team-card">
+                    <img src="https://img2.baidu.com/it/u=3928102337,2891023389&fm=253&fmt=auto&app=138&f=JPEG?w=200&h=200" alt="视觉美工组">
+                    <h4>赖安骥 陆敏莹 郭晓湉</h4>
+                    <p>视觉美工组 · 临药/法语/电气专业</p>
+                    <p>负责PPT视觉美化、项目计划书排版设计及品牌视觉物料制作。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 风险应对 -->
+    <section class="section" id="risk">
+        <div class="container">
+            <div class="section-title">
+                <h2>风险预估与解决办法</h2>
+            </div>
+            <div class="card-wrap">
+                <div class="card">
+                    <h3>市场需求风险</h3>
+                    <p>大学生文化消费需求动态变化，审美偏好易受潮流影响。</p>
+                    <br>
+                    <p><strong>解决</strong>：每季度开展校园文化消费调研，根据结果迭代IP与产品设计，贴合学生需求。</p>
+                </div>
+                <div class="card">
+                    <h3>资金筹备风险</h3>
+                    <p>资金来源单一，影响IP开发与活动落地。</p>
+                    <br>
+                    <p><strong>解决</strong>：申报学校双创扶持资金、国创赛奖金，开展校园公益众筹，多渠道获取资金。</p>
+                </div>
+                <div class="card">
+                    <h3>受众体验风险</h3>
+                    <p>IP与产品体验未达受众期待，影响传播效果。</p>
+                    <br>
+                    <p><strong>解决</strong>：产品内测收集反馈，严控设计制作品质，开设多渠道反馈入口，及时响应优化。</p>
+                </div>
+                <div class="card">
+                    <h3>资源对接风险</h3>
+                    <p>与非遗传承人沟通不畅，文化素材获取不精准。</p>
+                    <br>
+                    <p><strong>解决</strong>：提前建立稳定沟通渠道，定期赴汉中实地交流，邀请传承人担任项目文化顾问。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo" style="justify-content: center; font-size: 1.8rem; margin-bottom: 1rem;">
+                <span>汉韵桄心</span>
+            </div>
+            <div class="social">
+                <a href="https://www.douyin.com/" target="_blank"><i class="fa-brands fa-douyin"></i></a>
+            </div>
+            <p>西安交通大学汉韵桄心项目组</p>
+            <p>© 2026 汉韵桄心 版权所有 | 国创赛参赛项目</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 100) {
+                nav.style.padding = "0.6rem 5%";
+                nav.style.background = "rgba(0,90,167,0.95)";
+            } else {
+                nav.style.padding = "0.8rem 5%";
+                nav.style.background = "var(--primary)";
+            }
+        });
+    </script>
 </body>
 </html>
