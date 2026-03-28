@@ -25,7 +25,6 @@
             line-height: 1.6;
             scroll-behavior: smooth;
         }
-        /* 导航栏 */
         .nav {
             position: fixed;
             top: 0;
@@ -39,7 +38,6 @@
             align-items: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        /* 导航logo改为宋体 */
         .nav .logo {
             font-size: 1.5rem;
             font-weight: 700;
@@ -60,7 +58,6 @@
         .nav .menu a:hover {
             color: var(--accent);
         }
-        /* 通用板块 */
         .section {
             padding: 6rem 5%;
             min-height: 100vh;
@@ -81,7 +78,6 @@
             margin-bottom: 3rem;
             position: relative;
         }
-        /* === 大标题：PPT级艺术行楷 === */
         .section-title h2 {
             font-size: 2.4rem;
             color: var(--primary);
@@ -123,9 +119,8 @@
             margin-bottom: 1rem;
             color: var(--primary);
         }
-        /* 首页标题：艺术行楷 */
         .hero {
-            background: linear-gradient(rgba(0,90,167,0.85), rgba(0,90,167,0.85)), url('https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/Images/hero-bg.jpg') no-repeat center center;
+            background: linear-gradient(rgba(0,90,167,0.85), rgba(0,90,167,0.85)), url('https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/hero-bg.jpg') no-repeat center center;
             background-size: cover;
             color: var(--light);
             text-align: center;
@@ -160,7 +155,6 @@
             background: #d33a0f;
             transform: scale(1.05);
         }
-        /* 项目背景 */
         .bg-content {
             display: flex;
             flex-wrap: wrap;
@@ -190,7 +184,6 @@
             margin-right: 0.5rem;
             margin-bottom: 1rem;
         }
-        /* IP介绍 */
         .ip-intro {
             display: flex;
             flex-wrap: wrap;
@@ -208,7 +201,6 @@
             border-radius: 50%;
             border: 5px solid var(--primary);
         }
-        /* 产品服务 */
         .product-card {
             text-align: center;
         }
@@ -218,7 +210,6 @@
             object-fit: contain;
             margin-bottom: 1rem;
         }
-        /* 商业模式 */
         .biz-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -235,7 +226,6 @@
             color: var(--primary);
             margin-bottom: 1rem;
         }
-        /* 团队介绍 */
         .team-card {
             text-align: center;
         }
@@ -255,7 +245,6 @@
             font-size: 0.9rem;
             color: #666;
         }
-        /* 底部 */
         .footer {
             background: var(--primary);
             color: var(--light);
@@ -283,7 +272,6 @@
         html {
             scroll-behavior: smooth;
         }
-        /* 响应式 */
         @media (max-width: 768px) {
             .nav .menu { gap: 1rem; }
             .hero h1 { font-size: 2.8rem; }
@@ -298,7 +286,6 @@
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
     <nav class="nav">
         <div class="logo">
             <span>汉韵桄心</span>
@@ -315,7 +302,6 @@
         </div>
     </nav>
 
-    <!-- 首页 -->
     <section class="section hero" id="hero">
         <div class="container">
             <h1>汉韵桄心——非遗IP生态重塑计划</h1>
@@ -326,7 +312,6 @@
         </div>
     </section>
 
-    <!-- 项目背景 -->
     <section class="section" id="bg">
         <div class="container">
             <div class="section-title">
@@ -342,13 +327,12 @@
                     <p>政策层面，党的二十大、2025年《关于进一步加强非物质文化遗产保护工作的实施意见》明确要求推动非遗与教育、科技、旅游深度融合，为项目落地提供坚实政策支撑。</p>
                 </div>
                 <div class="bg-img">
-                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/Images/project-bg.png" alt="汉调桄桄表演">
+                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/project-bg.png" alt="汉调桄桄表演">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- IP介绍 -->
     <section class="section" id="ip">
         <div class="container">
             <div class="section-title">
@@ -356,7 +340,7 @@
             </div>
             <div class="ip-intro">
                 <div class="ip-img">
-                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/Images/ip-image.png" alt="汉小桄IP形象">
+                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/ip-image.png" alt="汉小桄IP形象">
                 </div>
                 <div class="ip-text">
                     <h3>IP设计理念</h3>
@@ -372,7 +356,6 @@
         </div>
     </section>
 
-    <!-- 产品服务 -->
     <section class="section" id="product">
         <div class="container">
             <div class="section-title">
@@ -382,29 +365,28 @@
             <div class="card-wrap">
                 <div class="card product-card">
                     <h3>桄心实物文创</h3>
-                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/Images/product-1.png" alt="帆布袋贴纸">
+                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/product-1.png" alt="帆布袋贴纸">
                     <p>「汉小桄」主题帆布袋、贴纸，单价低、使用场景广，适配学生日常。</p>
                 </div>
                 <div class="card product-card">
                     <h3>桄心数字文创</h3>
-                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/Images/product-2.png" alt="表情包红包封面">
+                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/product-2.png" alt="表情包红包封面">
                     <p>校园场景化表情包、节日/校园限定红包封面，关注抖音转发即可免费领取，实现社交裂变传播。</p>
                 </div>
                 <div class="card product-card">
                     <h3>品牌展示网页</h3>
-                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/Images/product-3.png" alt="品牌网页">
+                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/product-3.png" alt="品牌网页">
                     <p>轻量级品牌展示平台，含产品展示、文化故事、互动入口，引流至抖音完成交易，降低运营成本。</p>
                 </div>
                 <div class="card product-card">
                     <h3>线下拼豆打卡</h3>
-                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/Images/product-4.png" alt="拼豆打卡">
+                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/product-4.png" alt="拼豆打卡">
                     <p>校园摊位提供「汉小桄」主题拼豆材料，完成作品打卡发布抖音即可获得礼品，实现线下沉浸式体验+线上传播联动。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 商业模式 -->
     <section class="section" id="biz">
         <div class="container">
             <div class="section-title">
@@ -432,7 +414,6 @@
         </div>
     </section>
 
-    <!-- 发展战略 -->
     <section class="section" id="strategy">
         <div class="container">
             <div class="section-title">
@@ -455,7 +436,6 @@
         </div>
     </section>
 
-    <!-- 团队介绍 -->
     <section class="section" id="team">
         <div class="container">
             <div class="section-title">
@@ -464,25 +444,25 @@
             </div>
             <div class="card-wrap">
                 <div class="card team-card">
-                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/Images/team-1.png" alt="团队负责人">
+                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/team-1.png" alt="团队负责人">
                     <h4>王佩熙</h4>
                     <p>项目负责人 · 经济学专业</p>
                     <p>统筹项目整体规划与资源整合，主导IP战略定位，负责网页架构与视觉设计。</p>
                 </div>
                 <div class="card team-card">
-                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/Images/team-2.jpg" alt="设计负责人">
+                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/team-2.jpg" alt="设计负责人">
                     <h4>唐果</h4>
                     <p>设计负责人 · 材料科学与工程专业</p>
                     <p>主导IP形象原创设计与文创产品研发，构建「汉小桄」完整视觉识别体系。</p>
                 </div>
                 <div class="card team-card">
-                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/Images/team-3.jpg" alt="市场运营组">
+                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/team-3.jpg" alt="市场运营组">
                     <h4>阙舒瑶 贺予思 张少涵</h4>
                     <p>市场运营组 · ACCA/法学复合/英俄专业</p>
                     <p>负责市场策略规划、品牌推广运营及项目计划书撰写，构建项目商业逻辑。</p>
                 </div>
                 <div class="card team-card">
-                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/Images/team-4.jpg" alt="视觉美工组">
+                    <img src="https://cdn.jsdelivr.net/gh/hanyunguangxin/hanyunguangxin@main/team-4.jpg" alt="视觉美工组">
                     <h4>赖安骥 陆敏莹 郭晓湉</h4>
                     <p>视觉美工组 · 临药/法语/电气专业</p>
                     <p>负责PPT视觉美化、项目计划书排版设计及品牌视觉物料制作。</p>
@@ -491,7 +471,6 @@
         </div>
     </section>
 
-    <!-- 风险应对 -->
     <section class="section" id="risk">
         <div class="container">
             <div class="section-title">
@@ -526,7 +505,6 @@
         </div>
     </section>
 
-    <!-- 底部 -->
     <footer class="footer">
         <div class="container">
             <div class="logo" style="justify-content: center; font-size: 1.8rem; margin-bottom: 1rem;">
