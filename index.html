@@ -120,9 +120,10 @@
         }
         .card-wrap {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, minmax(320px, 400px));
             gap: 2rem;
             margin-top: 2rem;
+            justify-content: center;
         }
         .card {
             background: var(--light);
@@ -210,6 +211,37 @@
             color: #666;
             margin-top: 0.5rem;
             line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        /* 抖音跳转按钮样式 */
+        .douyin-btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 1px solid rgba(212,175,55,0.3);
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+        
+        .douyin-btn i {
+            margin-right: 8px;
+            color: #00ffff;
+        }
+        
+        .douyin-btn:hover {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border-color: var(--accent);
         }
         
         .hero {
@@ -380,6 +412,11 @@
             }
             .card-wrap {
                 grid-template-columns: 1fr;
+                justify-items: center;
+            }
+            .card {
+                max-width: 400px;
+                width: 100%;
             }
         }
         
@@ -757,7 +794,7 @@
         </div>
     </section>
 
-    <!-- 产品展示区域 - 带自动轮播效果 -->
+    <!-- 产品展示区域 - 带自动轮播效果 + 抖音跳转按钮 -->
     <section class="section" id="product">
         <div class="container">
             <div class="section-title">
@@ -785,6 +822,9 @@
                     <div class="product-desc">
                         「汉小桄」主题帆布袋、贴纸、徽章系列，单价低、使用场景广，适配学生日常。每款产品均融入桄桄戏经典元素，让非遗触手可及。
                     </div>
+                    <a href="https://www.douyin.com/" target="_blank" class="douyin-btn">
+                        <i class="fa-brands fa-douyin"></i> 跳转抖音了解更多
+                    </a>
                 </div>
                 
                 <!-- 第二个产品卡片：桄心数字文创 -->
@@ -807,6 +847,9 @@
                     <div class="product-desc">
                         校园场景化表情包、节日/校园限定红包封面、数字藏品，关注抖音转发即可免费领取，实现社交裂变传播，让非遗文化在指尖传递。
                     </div>
+                    <a href="https://www.douyin.com/" target="_blank" class="douyin-btn">
+                        <i class="fa-brands fa-douyin"></i> 跳转抖音了解更多
+                    </a>
                 </div>
             </div>
         </div>
@@ -950,7 +993,7 @@
             }
         }
         
-        // 下一张
+        // 下一张（单向循环）
         function nextSlide(id) {
             const carousel = carousels[id];
             carousel.index = (carousel.index + 1) % carousel.total;
