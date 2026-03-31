@@ -81,7 +81,7 @@
         .section-title h2 {
             font-size: 2.4rem;
             color: var(--primary);
-            font-weight: 70;
+            font-weight: 700;
             font-family: "STXingkai", "STKaiti", "KaiTi", "Microsoft YaHei", sans-serif;
             letter-spacing: 6px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -249,6 +249,52 @@
             font-size: 0.9rem;
             color: #666;
         }
+        /* 指导老师特殊样式 */
+        .teacher-card {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0,90,167,0.05), rgba(230,74,25,0.05));
+            border-top: 4px solid var(--accent);
+            position: relative;
+        }
+        .teacher-card::before {
+            content: "指导老师";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .teacher-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 0 4px rgba(230,74,25,0.1);
+        }
+        .teacher-card h4 {
+            color: var(--accent);
+            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+        }
+        .teacher-card p {
+            font-size: 0.9rem;
+            color: #333;
+            line-height: 1.7;
+        }
+        /* 3×3 网格布局 */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
         .footer {
             background: var(--primary);
             color: var(--light);
@@ -276,11 +322,19 @@
         html {
             scroll-behavior: smooth;
         }
+        @media (max-width: 992px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
         @media (max-width: 768px) {
             .nav .menu { gap: 1rem; }
             .hero h1 { font-size: 2.8rem; }
             .section-title h2 { font-size: 2rem; }
             .biz-grid { grid-template-columns: 1fr; }
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
         }
         @media (max-width: 480px) {
             .nav { flex-direction: column; gap: 0.8rem; padding: 0.8rem 3%; }
@@ -446,30 +500,65 @@
                 <h2>团队介绍</h2>
                 <p style="margin-top: 1rem; color: #666;">西安交通大学本科生团队 · 多专业融合 · 创新实干</p>
             </div>
-            <div class="card-wrap">
+            <!-- 3×3 团队网格布局 -->
+            <div class="team-grid">
+                <!-- 第一行 -->
                 <div class="card team-card">
-                    <img src="./images/team-1.png" alt="团队负责人">
+                    <img src="./images/team-1.png" alt="王佩熙">
                     <h4>王佩熙</h4>
-                    <p>项目负责人 · 经济学专业</p>
-                    <p>统筹项目整体规划与资源整合，主导IP战略定位，负责网页架构与视觉设计。</p>
+                    <p>经济学专业 · 项目负责人</p>
+                    <p>曾获陕西省魔方高校联赛三阶女子组第六名，擅长数据分析，主导项目IP战略定位，统筹整体规划、资源整合工作，同时负责网页设计相关事宜。</p>
                 </div>
                 <div class="card team-card">
-                    <img src="./images/team-3.jpg" alt="设计负责人">
+                    <img src="./images/team-2.jpg" alt="阙舒瑶">
+                    <h4>阙舒瑶</h4>
+                    <p>ACCA专业 · 市场运营</p>
+                    <p>校辩论队成员，曾获亚洲青少年辩论锦标赛季军、腾飞杯校级三等奖，负责市场策略规划与项目计划书撰写，搭建项目核心商业逻辑体系。</p>
+                </div>
+                <div class="card team-card">
+                    <img src="./images/team-3.jpg" alt="唐果">
                     <h4>唐果</h4>
-                    <p>设计负责人 · 材料专业</p>
-                    <p>主导IP形象原创设计与文创产品研发，构建「汉小桄」完整视觉识别体系。</p>
+                    <p>材料专业 · 设计负责人</p>
+                    <p>独立视觉文字小说游戏制作者，主导项目IP形象原创设计与文创产品研发，搭建「汉小桄」完整视觉识别体系。</p>
+                </div>
+                <!-- 第二行 -->
+                <div class="card team-card">
+                    <img src="./images/team-4.jpg" alt="陆敏莹">
+                    <h4>陆敏莹</h4>
+                    <p>法语专业 · 视觉美工</p>
+                    <p>曾获2025年新文科大赛校级三等奖、西安交通大学第三十六届创业创新大赛校级三等奖，获评2024-2025学年校优秀学生，负责项目PPT制作与美化。</p>
+                </div>
+                <!-- 指导老师（中间凸显） -->
+                <div class="card teacher-card">
+                    <img src="./images/team-999.png" alt="张成毅">
+                    <h4>张成毅</h4>
+                    <p>经济与金融学院 · 教授</p>
+                    <p>主要研究方向为金融模型与金融优化、量化金融等，主持国家自然科学基金等科研课题8项，出版英文专著2部，发表SCI/EI收录论文30余篇，曾获陕西高等学校科学技术奖二等奖等荣誉。</p>
                 </div>
                 <div class="card team-card">
-                    <img src="./images/team-2.jpg" alt="市场运营组">
-                    <h4>阙舒瑶 贺予思 张少涵</h4>
-                    <p>市场运营组 · ACCA/法学复合/英俄专业</p>
-                    <p>负责市场策略规划、品牌推广运营及项目计划书撰写，构建项目商业逻辑。</p>
+                    <img src="./images/team-5.png" alt="郭晓湉">
+                    <h4>郭晓湉</h4>
+                    <p>电气专业 · 视觉美工</p>
+                    <p>多次获评校级优秀学生，曾获2024年美国数学建模大赛M奖，负责项目计划书封面设计，同时承担视频剪辑核心工作。</p>
+                </div>
+                <!-- 第三行 -->
+                <div class="card team-card">
+                    <img src="./images/team-6.png" alt="张少涵">
+                    <h4>张少涵</h4>
+                    <p>英俄专业 · 市场运营</p>
+                    <p>精通多语种翻译，参与项目计划书撰写，协助完成视频剪辑工作。</p>
                 </div>
                 <div class="card team-card">
-                    <img src="./images/team-4.jpg" alt="视觉美工组">
-                    <h4>赖安骥 陆敏莹 郭晓湉</h4>
-                    <p>视觉美工组 · 临药/法语/电气专业</p>
-                    <p>负责PPT视觉美化、项目计划书排版设计及品牌视觉物料制作。</p>
+                    <img src="./images/team-7.png" alt="贺予思">
+                    <h4>贺予思</h4>
+                    <p>法学复合专业 · 市场运营</p>
+                    <p>曾蝉联2024、2025年新文科大赛校级二等奖，擅长文献检索与整理，主要负责项目文书编撰，同时协助视频剪辑。</p>
+                </div>
+                <div class="card team-card">
+                    <img src="./images/team-8.png" alt="赖安骥">
+                    <h4>赖安骥</h4>
+                    <p>临床药学专业 · 视觉美工</p>
+                    <p>草酸钙本钙创始人，获批2025年国家级大学生创新创业训练计划项目，2025年新文科两项参赛项目均获国家级银奖，发表论文被ACM收录，负责并指导项目PPT的制作与美化工作。</p>
                 </div>
             </div>
         </div>
