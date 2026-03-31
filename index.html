@@ -119,7 +119,7 @@
         }
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 20px rgba(0,0,0,12);
         }
         .card h3 {
             font-size: 1.3rem;
@@ -221,9 +221,10 @@
             margin-bottom: 1rem;
             max-height: 220px;
         }
+        /* 商业模式 固定 2×2 布局 */
         .biz-grid {
             display: grid;
-            template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -341,7 +342,6 @@
             .nav .menu { gap: 1rem; }
             .hero h1 { font-size: 2.8rem; }
             .section-title h2 { font-size: 2rem; }
-            .biz-grid { grid-template-columns: 1fr; }
             .team-grid {
                 grid-template-columns: 1fr;
             }
