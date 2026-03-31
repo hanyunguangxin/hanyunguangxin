@@ -279,61 +279,61 @@
         .hero-content {
             position: relative;
             z-index: 10;
-            max-width: 900px;
+            max-width: 1100px;
             padding: 2rem;
             animation: fadeInUp 1s ease-out;
         }
         
         .hero-subtitle {
-            font-size: 0.9rem;
-            letter-spacing: 4px;
+            font-size: 1.1rem;
+            letter-spacing: 6px;
             color: var(--accent);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             text-transform: uppercase;
             font-weight: 400;
             opacity: 0.9;
         }
         
         .hero h1 {
-            font-size: 4.5rem;
+            font-size: 5.5rem;
             font-family: "STXingkai", "KaiTi", "STKaiti", serif;
             font-weight: 600;
             line-height: 1.2;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             color: var(--light);
             text-shadow: 0 2px 20px rgba(0,0,0,0.3);
         }
         
         .hero h1 span {
             display: block;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-family: "SimSun", "思源宋体", serif;
-            letter-spacing: 6px;
+            letter-spacing: 8px;
             color: var(--accent);
-            margin-top: 0.5rem;
+            margin-top: 0.8rem;
             text-shadow: 0 1px 10px rgba(0,0,0,0.2);
         }
         
         .hero-desc {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: rgba(255,255,255,0.85);
-            max-width: 600px;
-            margin: 1.5rem auto;
+            max-width: 700px;
+            margin: 2rem auto;
             line-height: 1.8;
             font-family: "KaiTi", "STKaiti", serif;
         }
         
         .hero-info {
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(212,175,55,0.3);
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(212,175,55,0.4);
             display: inline-block;
         }
         
         .hero-info p {
-            font-size: 1rem;
-            color: rgba(255,255,255,0.8);
-            margin: 0.3rem 0;
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.85);
+            margin: 0.4rem 0;
             font-family: "KaiTi", "STKaiti", serif;
             letter-spacing: 1px;
         }
@@ -350,35 +350,56 @@
         }
         
         @media (max-width: 768px) {
+            .hero-content {
+                max-width: 90%;
+            }
+            .hero-subtitle {
+                font-size: 0.8rem;
+                letter-spacing: 4px;
+                margin-bottom: 1.2rem;
+            }
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 3.2rem;
             }
             .hero h1 span {
-                font-size: 1.4rem;
-                letter-spacing: 4px;
+                font-size: 1.6rem;
+                letter-spacing: 5px;
+                margin-top: 0.5rem;
             }
             .hero-desc {
-                font-size: 0.95rem;
+                font-size: 1rem;
+                margin: 1.2rem auto;
                 padding: 0 1rem;
+            }
+            .hero-info {
+                margin-top: 1.5rem;
+                padding-top: 1rem;
+            }
+            .hero-info p {
+                font-size: 0.95rem;
             }
             .card-wrap {
                 grid-template-columns: 1fr;
-            }
-            .hero-info p {
-                font-size: 0.85rem;
             }
         }
         
         @media (max-width: 480px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             .hero h1 span {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
+                letter-spacing: 3px;
             }
             .hero-subtitle {
-                font-size: 0.7rem;
-                letter-spacing: 2px;
+                font-size: 0.65rem;
+                letter-spacing: 3px;
+            }
+            .hero-desc {
+                font-size: 0.85rem;
+            }
+            .hero-info p {
+                font-size: 0.8rem;
             }
         }
         
@@ -736,7 +757,7 @@
         </div>
     </section>
 
-    <!-- 产品展示区域 - 带自动轮播效果（已修正所有图片路径） -->
+    <!-- 产品展示区域 - 带自动轮播效果 -->
     <section class="section" id="product">
         <div class="container">
             <div class="section-title">
