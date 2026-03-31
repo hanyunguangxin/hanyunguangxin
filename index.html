@@ -148,9 +148,9 @@
             display: flex;
             align-items: center;
         }
+        /* —— 修复为你要的深红色背景 —— */
         .hero {
-            background: linear-gradient(rgba(80, 20, 20, 0.88), rgba(40, 10, 10, 0.92)), 
-                        url('./images/project-bg.png') no-repeat center center;
+            background: linear-gradient(rgba(122, 30, 30, 0.95), rgba(80, 20, 20, 0.95));
             background-size: cover;
             color: var(--light);
             text-align: center;
@@ -439,7 +439,7 @@
             scroll-behavior: smooth;
         }
 
-        /* ———————————————————— 只修改了这里 ———————————————————— */
+        /* —— 轮播图样式（product-1-2尺寸 + 露出侧边边框）—— */
         .carousel {
             position: relative;
             width: 100%;
@@ -513,7 +513,6 @@
         .carousel-dot.active {
             background: white;
         }
-        /* ———————————————————— 结束修改 ———————————————————— */
 
         @media (max-width: 992px) {
             .team-grid {
