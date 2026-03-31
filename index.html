@@ -156,7 +156,7 @@
             overflow: hidden;
             border-radius: 8px;
             margin-bottom: 1rem;
-            aspect-ratio: 3 / 4; /* 3:4 竖版比例 */
+            aspect-ratio: 3 / 4;
         }
         
         .carousel-slides {
@@ -179,7 +179,6 @@
             display: block;
         }
         
-        /* 轮播指示点 */
         .carousel-dots {
             display: flex;
             justify-content: center;
@@ -206,7 +205,6 @@
             background: var(--primary);
         }
         
-        /* 产品卡片内文字 */
         .product-desc {
             font-size: 0.9rem;
             color: #666;
@@ -214,7 +212,6 @@
             line-height: 1.5;
         }
         
-        /* 其他原有样式保持不变 */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -326,75 +323,19 @@
             font-family: "KaiTi", "STKaiti", serif;
         }
         
-        .hero-buttons {
-            display: flex;
-            gap: 1.2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 2rem 0 3rem;
-        }
-        
-        .btn-primary {
+        .hero-info {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(212,175,55,0.3);
             display: inline-block;
-            padding: 0.9rem 2.5rem;
-            background: var(--accent);
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
+        }
+        
+        .hero-info p {
             font-size: 1rem;
-            border-radius: 4px;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
+            color: rgba(255,255,255,0.8);
+            margin: 0.3rem 0;
+            font-family: "KaiTi", "STKaiti", serif;
             letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(212,175,55,0.3);
-        }
-        
-        .btn-primary:hover {
-            background: #E5C23B;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212,175,55,0.4);
-        }
-        
-        .btn-outline {
-            display: inline-block;
-            padding: 0.9rem 2.5rem;
-            background: transparent;
-            color: var(--light);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            border: 1.5px solid rgba(212,175,55,0.6);
-            border-radius: 4px;
-            transition: all 0.3s;
-            cursor: pointer;
-            letter-spacing: 1px;
-        }
-        
-        .btn-outline:hover {
-            border-color: var(--accent);
-            background: rgba(212,175,55,0.1);
-            transform: translateY(-2px);
-        }
-        
-        .scroll-hint {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 20;
-            animation: bounce 2s infinite;
-            cursor: pointer;
-        }
-        
-        .scroll-hint a {
-            color: rgba(255,255,255,0.6);
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        
-        .scroll-hint a:hover {
-            color: var(--accent);
         }
         
         @keyframes fadeInUp {
@@ -406,11 +347,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(10px); }
         }
         
         @media (max-width: 768px) {
@@ -425,15 +361,11 @@
                 font-size: 0.95rem;
                 padding: 0 1rem;
             }
-            .hero-buttons {
-                gap: 0.8rem;
-            }
-            .btn-primary, .btn-outline {
-                padding: 0.7rem 1.8rem;
-                font-size: 0.9rem;
-            }
             .card-wrap {
                 grid-template-columns: 1fr;
+            }
+            .hero-info p {
+                font-size: 0.85rem;
             }
         }
         
@@ -688,14 +620,10 @@
                 以「汉小桄」IP为核心，让桄桄戏走出剧场<br>
                 让非遗触手可及，让传承融入日常
             </div>
-            <div class="hero-buttons">
-                <a href="#bg" class="btn-primary">探索非遗新生</a>
-                <a href="#ip" class="btn-outline">遇见汉小桄</a>
+            <div class="hero-info">
+                <p>负责人：王佩熙</p>
+                <p>联系电话：18829558566</p>
             </div>
-        </div>
-        
-        <div class="scroll-hint">
-            <a href="#bg"><i class="fas fa-chevron-down"></i></a>
         </div>
     </section>
 
@@ -808,27 +736,27 @@
         </div>
     </section>
 
-    <!-- 产品展示区域 - 带自动轮播效果 -->
+    <!-- 产品展示区域 - 带自动轮播效果（已修正所有图片路径） -->
     <section class="section" id="product">
         <div class="container">
             <div class="section-title">
                 <h2>产品与服务体系</h2>
-                <p style="margin-top: 1rem; color: #666;">轻量·高频·可传播 · 四位一体轻量化产品矩阵</p>
+                <p style="margin-top: 1rem; color: #666;">轻量·高频·可传播 · 轻量化产品矩阵</p>
             </div>
             <div class="card-wrap">
-                <!-- 第一个产品卡片：桄心实物文创（含3张轮播图） -->
+                <!-- 第一个产品卡片：桄心实物文创 -->
                 <div class="card product-card">
                     <h3>桄心实物文创</h3>
                     <div class="carousel-container" id="carousel1">
                         <div class="carousel-slides" id="slides1">
                             <div class="carousel-slide">
-                                <img src="./images/product-1-1.png" alt="帆布袋系列" onerror="this.src='https://via.placeholder.com/400x533?text=帆布袋+系列'">
+                                <img src="./images/product-1-1.png" alt="帆布袋系列">
                             </div>
                             <div class="carousel-slide">
-                                <img src="./images/product-1-2.png" alt="贴纸系列" onerror="this.src='https://via.placeholder.com/400x533?text=贴纸+系列'">
+                                <img src="./images/product-1-2.jpg" alt="贴纸系列">
                             </div>
                             <div class="carousel-slide">
-                                <img src="./images/product-1-3.png" alt="徽章系列" onerror="this.src='https://via.placeholder.com/400x533?text=徽章+系列'">
+                                <img src="./images/product-1-3.jpg" alt="徽章系列">
                             </div>
                         </div>
                     </div>
@@ -838,19 +766,19 @@
                     </div>
                 </div>
                 
-                <!-- 第二个产品卡片：桄心数字文创（含3张轮播图） -->
+                <!-- 第二个产品卡片：桄心数字文创 -->
                 <div class="card product-card">
                     <h3>桄心数字文创</h3>
                     <div class="carousel-container" id="carousel2">
                         <div class="carousel-slides" id="slides2">
                             <div class="carousel-slide">
-                                <img src="./images/product-2-1.png" alt="表情包系列" onerror="this.src='https://via.placeholder.com/400x533?text=表情包+系列'">
+                                <img src="./images/product-2-1.jpg" alt="表情包系列">
                             </div>
                             <div class="carousel-slide">
-                                <img src="./images/product-2-2.png" alt="红包封面系列" onerror="this.src='https://via.placeholder.com/400x533?text=红包+封面'">
+                                <img src="./images/product-2-2.jpg" alt="红包封面系列">
                             </div>
                             <div class="carousel-slide">
-                                <img src="./images/product-2-3.png" alt="数字藏品" onerror="this.src='https://via.placeholder.com/400x533?text=数字+藏品'">
+                                <img src="./images/product-2-3.jpg" alt="数字藏品">
                             </div>
                         </div>
                     </div>
@@ -1013,7 +941,6 @@
             const carousel = carousels[id];
             carousel.index = idx;
             updateCarousel(id);
-            // 手动切换后重置定时器
             resetAutoPlay(id);
         }
         
@@ -1023,10 +950,10 @@
             if (carousel.timer) clearInterval(carousel.timer);
             carousel.timer = setInterval(() => {
                 nextSlide(id);
-            }, 2000); // 2秒切换一次
+            }, 2000);
         }
         
-        // 重置自动轮播（手动点击后重新计时）
+        // 重置自动轮播
         function resetAutoPlay(id) {
             const carousel = carousels[id];
             if (carousel.timer) {
