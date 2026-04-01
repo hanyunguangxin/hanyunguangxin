@@ -150,7 +150,7 @@
             justify-content: center;
         }
         
-        /* ========== 轮播样式 ========== */
+        /* 产品轮播样式 */
         .carousel-container {
             position: relative;
             width: 100%;
@@ -215,7 +215,7 @@
             text-align: center;
         }
         
-        /* 抖音跳转按钮样式 */
+        /* 抖音跳转按钮 */
         .douyin-btn {
             display: inline-block;
             width: 100%;
@@ -244,6 +244,7 @@
             border-color: var(--accent);
         }
         
+        /* 首屏视觉 */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -381,6 +382,7 @@
             }
         }
         
+        /* 响应式布局 */
         @media (max-width: 1024px) {
             .card-wrap {
                 grid-template-columns: repeat(2, 1fr);
@@ -503,6 +505,9 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin-top: 2rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .biz-item {
             background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(249,245,240,0.95));
@@ -603,6 +608,9 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             margin-top: 2rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .risk-grid .card {
             padding: 1rem;
@@ -614,9 +622,6 @@
         .risk-grid .card p {
             font-size: 0.85rem;
             margin-bottom: 0;
-        }
-        .risk-grid .card br {
-            display: none;
         }
         .footer {
             background: var(--primary);
@@ -654,6 +659,11 @@
             }
             .risk-grid {
                 grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+            .biz-grid {
+                grid-template-columns: 1fr;
+                max-width: 100%;
             }
         }
         @media (max-width: 768px) {
@@ -694,7 +704,7 @@
             <div class="hero-subtitle">国家级非物质文化遗产 · 校园创新传承计划</div>
             <h1>汉韵桄心<br><span>——非遗IP生态重塑计划</span></h1>
             <div class="hero-desc">
-                以「汉小桄」IP为核心，让桄桄戏走出剧场<br>
+                以自创IP「汉小桄」为核心，让桄桄戏走出剧场<br>
                 让非遗触手可及，让传承融入日常
             </div>
             <div class="hero-info">
@@ -714,8 +724,8 @@
                     <span class="tag">国家级非遗</span>
                     <span class="tag">活态传承</span>
                     <span class="tag">校园创新</span>
-                    <p>汉调桄桄（桄桄戏）是明代末年关中秦腔与汉中方言、民间音乐融合形成的梆子声腔剧种，2006年列入国家级非物质文化遗产名录，现全国仅汉中市南郑区一个专业剧团，传承人不足60人，观众群体严重老龄化。</p>
-                    <p>高校大学生作为国潮文化核心消费群体，对非遗IP产品需求旺盛，但市场鲜有将非遗与年轻化、人格化IP深度融合的创新产品。在此背景下，团队以「非遗IP化、IP人格化」为切入点，打造汉调桄桄专属IP「汉小桄」，探索非遗活态传承新路径。</p>
+                    <p>汉调桄桄（桄桄戏）是明代末年关中秦腔与汉中方言、民间音乐融合形成的梆子声腔剧种，2006年列入国家级非物质文化遗产名录，现全国仅汉中市南郑区一个专业剧团，传承人不足60人，观众群体严重老龄化。调研结果显示，超75%汉中高校大学生未听过汉调桄桄，超90%未现场观看过演出，青年受众基础薄弱。
+                    <p>高校大学生作为国潮文化核心消费群体，对非遗IP产品需求旺盛，但市场鲜有将非遗与年轻化、人格化IP深度融合的创新产品。在此背景下，团队以「非遗IP化、IP人格化」为切入点，打造专属IP「汉小桄」，探索非遗活态传承新路径。</p>
                     <p>政策层面，党的二十大、2025年《关于进一步加强非物质文化遗产保护工作的实施意见》明确要求推动非遗与教育、科技、旅游深度融合，为项目落地提供坚实政策支撑。</p>
                 </div>
                 <div class="bg-img">
@@ -736,7 +746,7 @@
                     <img src="./images/team-1.png" alt="王佩熙">
                     <h4>王佩熙</h4>
                     <p>经济学专业 · 项目负责人</p>
-                    <p>曾获陕西省魔方高校联赛三阶女子组第六名，擅长数据分析，主导项目IP战略定位，统筹整体规划、资源整合工作，同时负责网页设计相关事宜。</p>
+                    <p>曾获陕西省魔方高校联赛三阶女子组第六名，擅长数据分析，主导项目IP战略定位，统筹整体规划、资源整合工作，同时负责网页设计。</p>
                 </div>
                 <div class="card team-card">
                     <img src="./images/team-2.jpg" alt="阙舒瑶">
@@ -748,43 +758,43 @@
                     <img src="./images/team-3.jpg" alt="唐果">
                     <h4>唐果</h4>
                     <p>材料专业 · 设计负责人</p>
-                    <p>独立视觉文字小说游戏制作者,主导项目IP形象原创设计与文创产品研发,搭建「汉小桄」完整视觉识别体系。</p>
+                    <p>独立视觉文字小说游戏制作者，主导项目IP形象原创设计与文创产品研发，搭建「汉小桄」完整视觉识别体系。</p>
                 </div>
                 <div class="card team-card">
                     <img src="./images/team-8.jpg" alt="赖安骥">
                     <h4>赖安骥</h4>
                     <p>临床药学专业 · 视觉美工</p>
-                    <p>草酸钙本钙创始人,获批2025年国家级大学生创新创业训练计划项目,2025年新文科两项参赛项目均获国家级银奖,发表论文被ACM收录,负责并指导项目PPT的制作与美化工作。</p>
+                    <p>草酸钙本钙创始人，获批2025年国家级大学生创新创业训练计划项目，2025年新文科两项参赛项目均获国家级银奖，发表论文被ACM收录，负责并指导项目PPT的制作与美化工作。</p>
                 </div>
                 <div class="card teacher-card">
                     <img src="./images/team-999.jpg" alt="张成毅">
                     <h4>张成毅</h4>
                     <p>经济与金融学院 · 教授</p>
-                    <p>主要研究方向为金融模型与金融优化、量化金融等,主持国家自然科学基金等科研课题8项,出版英文专著2部,发表SCI/EI收录论文30余篇,曾获陕西高等学校科学技术奖二等奖等荣誉。</p>
+                    <p>主要研究方向为金融模型与金融优化、量化金融等，主持国家自然科学基金等科研课题8项，出版英文专著2部，发表SCI/EI收录论文30余篇，曾获陕西高等学校科学技术奖二等奖等荣誉。</p>
                 </div>
                 <div class="card team-card">
                     <img src="./images/team-4.jpg" alt="陆敏莹">
                     <h4>陆敏莹</h4>
                     <p>法语专业 · 视觉美工</p>
-                    <p>曾获2025年新文科大赛校级三等奖、西安交通大学第三十六届创业创新大赛校级三等奖,获评2024-2025学年校优秀学生,负责项目PPT制作与美化。</p>
+                    <p>曾获2025年新文科大赛校级三等奖、西安交通大学第三十六届创业创新大赛校级三等奖，获评2024-2025学年校优秀学生，负责项目PPT制作与美化。</p>
                 </div>
                 <div class="card team-card">
                     <img src="./images/team-5.jpg" alt="郭晓湉">
                     <h4>郭晓湉</h4>
                     <p>电气专业 · 视觉美工</p>
-                    <p>多次获评校级优秀学生,曾获2024年美国数学建模大赛M奖,负责项目计划书封面设计,同时承担视频剪辑核心工作。</p>
+                    <p>多次获评校级优秀学生，曾获2024年美国数学建模大赛M奖，负责项目计划书封面设计，同时承担视频剪辑核心工作。</p>
                 </div>
                 <div class="card team-card">
                     <img src="./images/team-7.jpg" alt="贺予思">
                     <h4>贺予思</h4>
                     <p>法学复合专业 · 市场运营</p>
-                    <p>曾蝉联2024、2025年新文科大赛校级二等奖,擅长文献检索与整理,主要负责项目文书编撰,同时协助视频剪辑。</p>
+                    <p>曾蝉联2024、2025年新文科大赛校级二等奖，擅长文献检索与整理，参与项目计划书撰写，同时协助视频剪辑。</p>
                 </div>
                 <div class="card team-card">
                     <img src="./images/team-6.jpg" alt="张少涵">
                     <h4>张少涵</h4>
                     <p>英俄专业 · 市场运营</p>
-                    <p>精通多语种翻译,参与项目计划书撰写,协助完成视频剪辑工作。</p>
+                    <p>精通多语种翻译，参与项目计划书撰写，协助完成视频剪辑工作。</p>
                 </div>
             </div>
         </div>
@@ -801,19 +811,19 @@
                 </div>
                 <div class="ip-text">
                     <h3>IP设计理念</h3>
-                    <p>「汉小桄」以汉调桄桄经典戏曲角色为原型,采用Q版卡通风格,提取戏曲盔头、雉鸡翎、彩色绒球、红晕凤眼妆等核心视觉元素,结合桄桄子乐器打造专属形象,兼具非遗文化底蕴与年轻化审美。</p>
+                    <p>「汉小桄」以汉调桄桄经典戏曲角色为原型，采用Q版卡通风格，提取戏曲盔头、雉鸡翎、彩色绒球、红晕凤眼妆等核心视觉元素打造专属形象,兼具非遗文化底蕴与年轻化审美。</p>
                     <br>
                     <h3>IP人格化设定</h3>
-                    <p>性格活泼开朗、热爱传统文化的非遗小守护者,懂汉调桄桄唱腔与表演,喜欢和大学生互动,核心标签:<strong>非遗传承者、国潮小达人、校园小伙伴</strong>。</p>
+                    <p>性格活泼开朗、热爱传统文化的非遗小守护者，懂汉调桄桄唱腔与表演，喜欢和大学生互动，核心标签:<strong>非遗传承者、国潮小达人、校园小伙伴</strong>。</p>
                     <br>
                     <h3>IP世界观</h3>
-                    <p>生活在「桄桄戏曲小镇」,跟随非遗传承人学习汉调桄桄技艺,通过趣味方式将戏曲文化传递给年轻群体,让非遗走出剧场、融入日常。</p>
+                    <p>生活在「桄桄戏曲小镇」，跟随非遗传承人学习汉调桄桄技艺，通过趣味方式将戏曲文化传递给年轻群体，让非遗走出剧场、融入日常。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 产品展示区域 - 4个产品卡片，每个有3张轮播图 -->
+    <!-- 产品展示区：帆布袋/红包封面为单图，贴纸/表情包为四图轮播 -->
     <section class="section" id="product">
         <div class="container">
             <div class="section-title">
@@ -821,23 +831,17 @@
                 <p style="margin-top: 1rem; color: #666;">轻量·高频·可传播 · 轻量化产品矩阵</p>
             </div>
             <div class="card-wrap">
-                <!-- 产品1：帆布袋系列 -->
+                <!-- 帆布袋系列：单张展示 -->
                 <div class="card product-card">
                     <h3>帆布袋系列</h3>
                     <div class="carousel-container" id="carousel1">
                         <div class="carousel-slides" id="slides1">
                             <div class="carousel-slide">
-                                <img src="./images/product-1-1.png" alt="帆布袋系列1">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./images/product-1-2.jpg" alt="帆布袋系列2">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./images/product-1-3.jpg" alt="帆布袋系列3">
+                                <img src="./images/product-1-1.png" alt="帆布袋系列">
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-dots" id="dots1"></div>
+                    <div class="carousel-dots" id="dots1" style="display: none;"></div>
                     <div class="product-desc">
                         「汉小桄」主题帆布袋，融入桄桄戏经典元素，日常百搭，让非遗触手可及。
                     </div>
@@ -846,7 +850,7 @@
                     </a>
                 </div>
                 
-                <!-- 产品2：贴纸系列 -->
+                <!-- 贴纸系列：四张轮播 -->
                 <div class="card product-card">
                     <h3>贴纸系列</h3>
                     <div class="carousel-container" id="carousel2">
@@ -860,6 +864,9 @@
                             <div class="carousel-slide">
                                 <img src="./images/product-2-3.jpg" alt="贴纸系列3">
                             </div>
+                            <div class="carousel-slide">
+                                <img src="./images/product-2-4.jpg" alt="贴纸系列4">
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-dots" id="dots2"></div>
@@ -871,7 +878,7 @@
                     </a>
                 </div>
                 
-                <!-- 产品3：表情包系列 -->
+                <!-- 表情包系列：四张轮播 -->
                 <div class="card product-card">
                     <h3>表情包系列</h3>
                     <div class="carousel-container" id="carousel3">
@@ -885,6 +892,9 @@
                             <div class="carousel-slide">
                                 <img src="./images/product-3-3.jpg" alt="表情包系列3">
                             </div>
+                            <div class="carousel-slide">
+                                <img src="./images/product-3-4.jpg" alt="表情包系列4">
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-dots" id="dots3"></div>
@@ -896,23 +906,17 @@
                     </a>
                 </div>
                 
-                <!-- 产品4：红包封面系列 -->
+                <!-- 红包封面系列：单张展示 -->
                 <div class="card product-card">
                     <h3>红包封面系列</h3>
                     <div class="carousel-container" id="carousel4">
                         <div class="carousel-slides" id="slides4">
                             <div class="carousel-slide">
-                                <img src="./images/product-4-1.jpg" alt="红包封面系列1">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./images/product-4-2.jpg" alt="红包封面系列2">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./images/product-4-3.jpg" alt="红包封面系列3">
+                                <img src="./images/product-4-1.jpg" alt="红包封面系列">
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-dots" id="dots4"></div>
+                    <div class="carousel-dots" id="dots4" style="display: none;"></div>
                     <div class="product-desc">
                         节日/校园限定红包封面，关注抖音转发即可免费领取，实现社交裂变传播。
                     </div>
@@ -981,19 +985,19 @@
             <div class="risk-grid">
                 <div class="card">
                     <h3>市场需求风险</h3>
-                    <p>大学生文化消费需求动态变化,审美偏好易受潮流影响。<strong>解决</strong>:每季度开展校园文化消费调研,根据结果迭代IP与产品设计,贴合学生需求。</p>
+                    <p>大学生文化消费需求动态变化，审美偏好易受潮流影响。<strong>解决</strong>:每季度开展校园文化消费调研，根据结果迭代IP与产品设计，贴合学生需求。</p>
                 </div>
                 <div class="card">
                     <h3>资金筹备风险</h3>
-                    <p>资金来源单一,影响IP开发与活动落地。<strong>解决</strong>:申报学校双创扶持资金、国创赛奖金,开展校园公益众筹,多渠道获取资金。</p>
+                    <p>资金来源单一，影响IP开发与活动落地。<strong>解决</strong>:申报学校双创扶持资金、国创赛奖金，开展校园公益众筹，多渠道获取资金。</p>
                 </div>
                 <div class="card">
                     <h3>受众体验风险</h3>
-                    <p>IP与产品体验未达受众期待,影响传播效果。<strong>解决</strong>:产品内测收集反馈,严控设计制作品质,开设多渠道反馈入口,及时响应优化。</p>
+                    <p>IP与产品体验未达受众期待，影响传播效果。<strong>解决</strong>:产品内测收集反馈，严控设计制作品质，开设多渠道反馈入口，及时响应优化。</p>
                 </div>
                 <div class="card">
                     <h3>资源对接风险</h3>
-                    <p>与非遗传承人沟通不畅,文化素材获取不精准。<strong>解决</strong>:提前建立稳定沟通渠道,定期赴汉中实地交流,邀请传承人担任项目文化顾问。</p>
+                    <p>与非遗传承人沟通不畅，文化素材获取不精准。<strong>解决</strong>:提前建立稳定沟通渠道，定期赴汉中实地交流，邀请传承人担任项目文化顾问。</p>
                 </div>
             </div>
         </div>
@@ -1013,15 +1017,12 @@
     </footer>
 
     <script>
-        // 轮播配置 - 4个轮播
+        // 贴纸和表情包模块的轮播控制（各4张）
         const carousels = {
-            1: { index: 0, total: 3, slides: null, dots: null, timer: null },
-            2: { index: 0, total: 3, slides: null, dots: null, timer: null },
-            3: { index: 0, total: 3, slides: null, dots: null, timer: null },
-            4: { index: 0, total: 3, slides: null, dots: null, timer: null }
+            2: { index: 0, total: 4, slides: null, dots: null, timer: null },
+            3: { index: 0, total: 4, slides: null, dots: null, timer: null }
         };
         
-        // 初始化轮播
         function initCarousel(id) {
             const slides = document.getElementById(`slides${id}`);
             const dotsContainer = document.getElementById(`dots${id}`);
@@ -1029,7 +1030,6 @@
             if (!slides || !dotsContainer) return;
             carousel.slides = slides;
             
-            // 创建指示点
             for (let i = 0; i < carousel.total; i++) {
                 const dot = document.createElement('div');
                 dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
@@ -1037,19 +1037,14 @@
                 dotsContainer.appendChild(dot);
             }
             carousel.dots = dotsContainer.children;
-            
-            // 启动自动轮播（2秒切换一次）
             startAutoPlay(id);
         }
         
-        // 更新轮播显示
         function updateCarousel(id) {
             const carousel = carousels[id];
             if (!carousel.slides) return;
             const offset = -carousel.index * 100;
             carousel.slides.style.transform = `translateX(${offset}%)`;
-            
-            // 更新指示点样式
             if (carousel.dots) {
                 for (let i = 0; i < carousel.dots.length; i++) {
                     carousel.dots[i].classList.toggle('active', i === carousel.index);
@@ -1057,14 +1052,12 @@
             }
         }
         
-        // 下一张
         function nextSlide(id) {
             const carousel = carousels[id];
             carousel.index = (carousel.index + 1) % carousel.total;
             updateCarousel(id);
         }
         
-        // 跳转到指定张
         function goToSlide(id, idx) {
             const carousel = carousels[id];
             carousel.index = idx;
@@ -1072,16 +1065,12 @@
             resetAutoPlay(id);
         }
         
-        // 启动自动轮播
         function startAutoPlay(id) {
             const carousel = carousels[id];
             if (carousel.timer) clearInterval(carousel.timer);
-            carousel.timer = setInterval(() => {
-                nextSlide(id);
-            }, 2000);
+            carousel.timer = setInterval(() => nextSlide(id), 2000);
         }
         
-        // 重置自动轮播
         function resetAutoPlay(id) {
             const carousel = carousels[id];
             if (carousel.timer) {
@@ -1090,15 +1079,12 @@
             }
         }
         
-        // 页面加载完成后初始化所有轮播
         document.addEventListener('DOMContentLoaded', function() {
-            initCarousel(1);
-            initCarousel(2);
-            initCarousel(3);
-            initCarousel(4);
+            if(document.getElementById('slides2')) initCarousel(2);
+            if(document.getElementById('slides3')) initCarousel(3);
         });
         
-        // 导航栏滚动效果
+        // 导航栏滚动时改变背景透明度
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('.nav');
             if (window.scrollY > 100) {
