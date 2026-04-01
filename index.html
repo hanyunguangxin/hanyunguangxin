@@ -447,20 +447,63 @@
             display: flex;
             flex-wrap: wrap;
             gap: 3rem;
-            align-items: center;
+            align-items: flex-start;
         }
-        .bg-text, .bg-img {
+        .bg-text {
+            flex: 1.2;
+            min-width: 280px;
+        }
+        /* 饼状图区域样式 - 四图等大网格 */
+        .pie-charts-grid {
             flex: 1;
-            min-width: 300px;
+            min-width: 320px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            background: rgba(255,255,240,0.3);
+            border-radius: 24px;
+            padding: 0.5rem;
         }
-        .bg-img img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .pie-item {
+            background: var(--light);
+            border-radius: 20px;
+            padding: 0.8rem;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+            text-align: center;
             border: 1px solid var(--gray);
         }
+        .pie-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+            border-color: var(--accent);
+        }
+        .pie-item img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            border-radius: 16px;
+            background: #FEFCF8;
+            padding: 0.3rem;
+            display: block;
+        }
+        /* 移除饼图下方的标注文字样式，不再显示 */
+        .pie-caption {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .pie-charts-grid {
+                gap: 1rem;
+                min-width: 260px;
+            }
+        }
+        @media (max-width: 550px) {
+            .pie-charts-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+        }
+        
         .bg-text p {
             margin-bottom: 1rem;
             font-size: 1.05rem;
@@ -488,10 +531,11 @@
             flex: 1;
             min-width: 300px;
         }
+        /* 修改IP形象展示框为方形，移除圆形样式 */
         .ip-img img {
             width: 80%;
             max-width: 300px;
-            border-radius: 50%;
+            border-radius: 12px;
             border: 5px solid var(--primary);
             box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
         }
@@ -714,6 +758,7 @@
         </div>
     </section>
 
+    <!-- 项目背景模块：四张饼状图 2x2等大排版，已移除标注文字 -->
     <section class="section" id="bg">
         <div class="container">
             <div class="section-title">
@@ -728,8 +773,20 @@
                     <p>高校大学生作为国潮文化核心消费群体，对非遗IP产品需求旺盛，但市场鲜有将非遗与年轻化、人格化IP深度融合的创新产品。在此背景下，团队以「非遗IP化、IP人格化」为切入点，打造专属IP「汉小桄」，探索非遗活态传承新路径。</p>
                     <p>政策层面，党的二十大、2025年《关于进一步加强非物质文化遗产保护工作的实施意见》明确要求推动非遗与教育、科技、旅游深度融合，为项目落地提供坚实政策支撑。</p>
                 </div>
-                <div class="bg-img">
-                    <img src="./images/project-bg.png" alt="汉调桄桄表演">
+                <!-- 四张饼状图区域：等大2x2排列，无标注文字 -->
+                <div class="pie-charts-grid">
+                    <div class="pie-item">
+                        <img src="./images/pie-1.png" alt="调研数据饼图1：认知度分析">
+                    </div>
+                    <div class="pie-item">
+                        <img src="./images/pie-2.png" alt="调研数据饼图2：观看意愿">
+                    </div>
+                    <div class="pie-item">
+                        <img src="./images/pie-3.png" alt="调研数据饼图3：文创偏好">
+                    </div>
+                    <div class="pie-item">
+                        <img src="./images/pie-4.png" alt="调研数据饼图4：传播渠道">
+                    </div>
                 </div>
             </div>
         </div>
