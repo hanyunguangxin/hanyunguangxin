@@ -150,7 +150,7 @@
             justify-content: center;
         }
         
-        /* 产品轮播样式 */
+        /* 产品展示用的轮播组件 */
         .carousel-container {
             position: relative;
             width: 100%;
@@ -215,7 +215,7 @@
             text-align: center;
         }
         
-        /* 抖音跳转按钮 */
+        /* 抖音跳转按钮样式，黑金风格 */
         .douyin-btn {
             display: inline-block;
             width: 100%;
@@ -244,7 +244,7 @@
             border-color: var(--accent);
         }
         
-        /* 首屏视觉 */
+        /* 首屏视觉，氛围感拉满 */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -382,7 +382,7 @@
             }
         }
         
-        /* 响应式布局 */
+        /* 手机小屏适配，挤一挤也能看 */
         @media (max-width: 1024px) {
             .card-wrap {
                 grid-template-columns: repeat(2, 1fr);
@@ -453,7 +453,7 @@
             flex: 1.2;
             min-width: 280px;
         }
-        /* 饼状图区域样式 - 四图等大网格 */
+        /* 四个饼图2x2网格，没有文字标注 */
         .pie-charts-grid {
             flex: 1;
             min-width: 320px;
@@ -487,7 +487,6 @@
             padding: 0.3rem;
             display: block;
         }
-        /* 移除饼图下方的标注文字样式，不再显示 */
         .pie-caption {
             display: none;
         }
@@ -531,7 +530,7 @@
             flex: 1;
             min-width: 300px;
         }
-        /* 修改IP形象展示框为方形，移除圆形样式 */
+        /* IP形象展示，带点金边感觉 */
         .ip-img img {
             width: 80%;
             max-width: 300px;
@@ -760,7 +759,7 @@
         </div>
     </section>
 
-    <!-- 项目背景模块：四张饼状图 2x2等大排版，已移除标注文字 -->
+    <!-- 项目背景区域，旁边放了四个调研饼图，直观展示数据 -->
     <section class="section" id="bg">
         <div class="container">
             <div class="section-title">
@@ -775,7 +774,7 @@
                     <p>高校大学生作为国潮文化的核心消费群体，对非遗IP产品展现出较高需求，然而市场上鲜有将非遗与年轻化、人格化IP深度融合的创新产品。基于此，团队以“非遗IP化、IP人格化”为切入点，打造专属IP“汉小桄”，探索非遗活态传承的新路径。</p>
                     <p>政策层面，党的二十大及2025年《关于进一步加强非物质文化遗产保护工作的实施意见》均明确提出，要推动非遗与教育、科技、旅游深度融合，为项目落地提供了坚实的政策支撑。</p>
                 </div>
-                <!-- 四张饼状图区域：等大2x2排列，无标注文字 -->
+                <!-- 四张饼状图，2x2排列，不显示额外说明 -->
                 <div class="pie-charts-grid">
                     <div class="pie-item">
                         <img src="./images/pie-1.png" alt="调研数据饼图1：认知度分析">
@@ -882,7 +881,7 @@
         </div>
     </section>
 
-    <!-- 产品展示区：帆布袋/红包封面为单图，贴纸/表情包为四图轮播 -->
+    <!-- 产品区，贴纸和表情包是轮播，帆布袋和红包封面单图 -->
     <section class="section" id="product">
         <div class="container">
             <div class="section-title">
@@ -890,7 +889,6 @@
                 <p style="margin-top: 1rem; color: #666;">轻量·高频·可传播 · 轻量化产品矩阵</p>
             </div>
             <div class="card-wrap">
-                <!-- 帆布袋系列：单张展示 -->
                 <div class="card product-card">
                     <h3>帆布袋系列</h3>
                     <div class="carousel-container" id="carousel1">
@@ -909,254 +907,9 @@
                     </a>
                 </div>
                 
-                <!-- 贴纸系列：四张轮播 -->
                 <div class="card product-card">
                     <h3>贴纸系列</h3>
                     <div class="carousel-container" id="carousel2">
                         <div class="carousel-slides" id="slides2">
                             <div class="carousel-slide">
-                                <img src="./images/product-2-1.jpg" alt="贴纸系列1">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./images/product-2-2.jpg" alt="贴纸系列2">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./images/product-2-3.jpg" alt="贴纸系列3">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./images/product-2-4.jpg" alt="贴纸系列4">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-dots" id="dots2"></div>
-                    <div class="product-desc">
-                        可爱Q版「汉小桄」贴纸，可装饰手机、电脑、手账，让非遗文化随行。
-                    </div>
-                    <a href="https://www.douyin.com/" target="_blank" class="douyin-btn">
-                        <i class="fa-brands fa-douyin"></i> 跳转抖音了解更多
-                    </a>
-                </div>
-                
-                <!-- 表情包系列：四张轮播 -->
-                <div class="card product-card">
-                    <h3>表情包系列</h3>
-                    <div class="carousel-container" id="carousel3">
-                        <div class="carousel-slides" id="slides3">
-                            <div class="carousel-slide">
-                                <img src="./images/product-3-1.jpg" alt="表情包系列1">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./images/product-3-2.jpg" alt="表情包系列2">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./images/product-3-3.jpg" alt="表情包系列3">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./images/product-3-4.jpg" alt="表情包系列4">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-dots" id="dots3"></div>
-                    <div class="product-desc">
-                        校园场景化动态表情包，日常聊天必备，让非遗文化在指尖传递。
-                    </div>
-                    <a href="https://www.douyin.com/" target="_blank" class="douyin-btn">
-                        <i class="fa-brands fa-douyin"></i> 跳转抖音了解更多
-                    </a>
-                </div>
-                
-                <!-- 红包封面系列：单张展示 -->
-                <div class="card product-card">
-                    <h3>红包封面系列</h3>
-                    <div class="carousel-container" id="carousel4">
-                        <div class="carousel-slides" id="slides4">
-                            <div class="carousel-slide">
-                                <img src="./images/product-4-1.jpg" alt="红包封面系列">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-dots" id="dots4" style="display: none;"></div>
-                    <div class="product-desc">
-                        节日/校园限定红包封面，关注抖音转发即可免费领取，实现社交裂变传播。
-                    </div>
-                    <a href="https://www.douyin.com/" target="_blank" class="douyin-btn">
-                        <i class="fa-brands fa-douyin"></i> 跳转抖音了解更多
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 商业模式模块：换行显示，去除加粗 -->
-    <section class="section" id="biz">
-        <div class="container">
-            <div class="section-title">
-                <h2>商业模式</h2>
-                <p style="margin-top: 1rem; color: #666;">IP驱动型 · 三重驱动 · 多元盈利</p>
-            </div>
-            <div class="biz-grid">
-                <div class="biz-item">
-                    <h3>核心逻辑</h3>
-                    <p>以「汉小桄」IP为核心，构建「IP内容×产品服务×用户生态」三重驱动模式。<br>打造「IP形象引领-线上引流-线下体验-场景渗透」的轻量化产品服务体系，兼顾文化传播与商业变现。</p>
-                </div>
-                <div class="biz-item">
-                    <h3>收入来源</h3>
-                    <p>① 产品销售收入（帆布袋/贴纸/数字文创）<br>② 活动收入（拼豆DIY体验/定制服务）<br>③ IP授权收入（品牌联名/二次创作）<br>④ 会员收入（专属权益）<br>⑤ B端合作（学校团购/企业定制）</p>
-                </div>
-                <div class="biz-item">
-                    <h3>商业闭环</h3>
-                    <p>生产：本地代工+内部设计，控制成本<br>消费：线上抖音/电商+线下校园，多渠道销售<br>反馈：用户调研+数据分析，持续迭代IP与产品，形成良性循环</p>
-                </div>
-                <div class="biz-item">
-                    <h3>竞争优势</h3>
-                    <p>① 差异化：校园非遗IP专属标签，人格化IP区别于传统文创<br>② 低成本：社交裂变获客，校园免费场地降低运营成本<br>③ 高粘性：产品实用+情感连接+社群运营，提升用户忠诚度</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 发展战略模块：换行显示 -->
-    <section class="section" id="strategy">
-        <div class="container">
-            <div class="section-title">
-                <h2>发展战略与规划</h2>
-            </div>
-            <div class="card-wrap" style="grid-template-columns: repeat(3, 1fr);">
-                <div class="card">
-                    <h3>第一阶段：创意验证期（2026.4）</h3>
-                    <p>完成「汉小桄」完整视觉设计<br>首批文创产品打样<br>搭建品牌网页原型<br>抖音发布宣传视频<br>验证大学生用户兴趣，完成国创赛参赛落地</p>
-                </div>
-                <div class="card">
-                    <h3>第二阶段：实践深化期（2026.7-8）</h3>
-                    <p>赴汉中南郑区实地调研，与传承人深度交流<br>完善IP文化内涵<br>将调研成果转化为IP故事、产品设计与内容素材<br>丰富文化内核</p>
-                </div>
-                <div class="card">
-                    <h3>第三阶段：项目拓展期（2026.9起）</h3>
-                    <p>复制「自创非遗IP」模式至宁强羌绣等非遗项目<br>打造「非遗守护者」IP矩阵<br>迭代产品线（盲盒/数字藏品）<br>拓展至西安其他高校，形成校园非遗传播圈</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 风险应对模块：换行显示，去除加粗 -->
-    <section class="section" id="risk">
-        <div class="container">
-            <div class="section-title">
-                <h2>风险预估与解决办法</h2>
-            </div>
-            <div class="risk-grid">
-                <div class="card">
-                    <h3>市场需求风险</h3>
-                    <p>大学生文化消费需求动态变化，审美偏好易受潮流影响。<br>解决：每季度开展校园文化消费调研，根据结果迭代IP与产品设计，贴合学生需求。</p>
-                </div>
-                <div class="card">
-                    <h3>资金筹备风险</h3>
-                    <p>资金来源单一，影响IP开发与活动落地。<br>解决：申报学校双创扶持资金、国创赛奖金，开展校园公益众筹，多渠道获取资金。</p>
-                </div>
-                <div class="card">
-                    <h3>受众体验风险</h3>
-                    <p>IP与产品体验未达受众期待，影响传播效果。<br>解决：产品内测收集反馈，严控设计制作品质，开设多渠道反馈入口，及时响应优化。</p>
-                </div>
-                <div class="card">
-                    <h3>资源对接风险</h3>
-                    <p>与非遗传承人沟通不畅，文化素材获取不精准。<br>解决：提前建立稳定沟通渠道，定期赴汉中实地交流，邀请传承人担任项目文化顾问。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="logo" style="justify-content: center; font-size: 1.8rem; margin-bottom: 1rem;">
-                <span>汉韵桄心</span>
-            </div>
-            <div class="social">
-                <a href="https://www.douyin.com/" target="_blank"><i class="fa-brands fa-douyin"></i></a>
-            </div>
-            <p>西安交通大学汉韵桄心项目组</p>
-            <p>© 2026 汉韵桄心 版权所有 | 国创赛参赛项目</p>
-        </div>
-    </footer>
-
-    <script>
-        // 贴纸和表情包模块的轮播控制（各4张）
-        const carousels = {
-            2: { index: 0, total: 4, slides: null, dots: null, timer: null },
-            3: { index: 0, total: 4, slides: null, dots: null, timer: null }
-        };
-        
-        function initCarousel(id) {
-            const slides = document.getElementById(`slides${id}`);
-            const dotsContainer = document.getElementById(`dots${id}`);
-            const carousel = carousels[id];
-            if (!slides || !dotsContainer) return;
-            carousel.slides = slides;
-            
-            for (let i = 0; i < carousel.total; i++) {
-                const dot = document.createElement('div');
-                dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-                dot.onclick = () => goToSlide(id, i);
-                dotsContainer.appendChild(dot);
-            }
-            carousel.dots = dotsContainer.children;
-            startAutoPlay(id);
-        }
-        
-        function updateCarousel(id) {
-            const carousel = carousels[id];
-            if (!carousel.slides) return;
-            const offset = -carousel.index * 100;
-            carousel.slides.style.transform = `translateX(${offset}%)`;
-            if (carousel.dots) {
-                for (let i = 0; i < carousel.dots.length; i++) {
-                    carousel.dots[i].classList.toggle('active', i === carousel.index);
-                }
-            }
-        }
-        
-        function nextSlide(id) {
-            const carousel = carousels[id];
-            carousel.index = (carousel.index + 1) % carousel.total;
-            updateCarousel(id);
-        }
-        
-        function goToSlide(id, idx) {
-            const carousel = carousels[id];
-            carousel.index = idx;
-            updateCarousel(id);
-            resetAutoPlay(id);
-        }
-        
-        function startAutoPlay(id) {
-            const carousel = carousels[id];
-            if (carousel.timer) clearInterval(carousel.timer);
-            carousel.timer = setInterval(() => nextSlide(id), 2000);
-        }
-        
-        function resetAutoPlay(id) {
-            const carousel = carousels[id];
-            if (carousel.timer) {
-                clearInterval(carousel.timer);
-                startAutoPlay(id);
-            }
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            if(document.getElementById('slides2')) initCarousel(2);
-            if(document.getElementById('slides3')) initCarousel(3);
-        });
-        
-        // 导航栏滚动时改变背景透明度
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('.nav');
-            if (window.scrollY > 100) {
-                nav.style.padding = "0.6rem 5%";
-                nav.style.background = "rgba(122,30,30,0.95)";
-            } else {
-                nav.style.padding = "0.8rem 5%";
-                nav.style.background = "var(--primary)";
-            }
-        });
-    </script>
-</body>
-</html>
+                                <img src
